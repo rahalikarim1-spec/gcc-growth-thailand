@@ -31,17 +31,3 @@ export function Portrait({ alt, name, role, role2, priority }: Props) {
     </figure>
   );
 }
-
-/** Compact avatar for the homepage credibility row. */
-export function PortraitMini({ alt }: { alt: string }) {
-  return (
-    <Image
-      src={SRC}
-      alt={alt}
-      width={W}
-      height={H}
-      sizes="88px"
-      className="h-[7.5rem] w-[5rem] shrink-0 rounded-2xl border border-white/20 object-cover object-[50%_14%]"
-    />
-  );
-}

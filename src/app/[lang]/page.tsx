@@ -6,7 +6,6 @@ import { localePath, type Locale } from "@/lib/i18n";
 import { SERVICE_SLUGS } from "@/lib/routes";
 import { absoluteUrl, person } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
-import { PortraitMini } from "@/components/Portrait";
 import { Hero } from "@/components/Hero";
 import { RichText } from "@/components/RichText";
 import { TeamDiagram } from "@/components/TeamDiagram";
@@ -150,15 +149,7 @@ export default async function HomePage({ params }: Props) {
       <section id={h.about.id} aria-labelledby="about-title" className="on-dark bg-ink-900 text-white">
         <div className="container-x section-y grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <div className="flex items-center gap-5">
-              <PortraitMini alt={dict.about.portraitAlt} />
-              <div>
-                <p className="text-lg font-semibold">{dict.about.h1}</p>
-                <p className="text-sm text-slate-300">{dict.about.role}</p>
-                <p className="text-sm text-signal-bright">{dict.about.role2}</p>
-              </div>
-            </div>
-            <h2 id="about-title" className="h-section mt-8">{h.about.h2}</h2>
+            <h2 id="about-title" className="h-section">{h.about.h2}</h2>
             <div className="lead mt-6 grid max-w-2xl gap-4">{h.about.body.map((p) => <p key={p}>{p}</p>)}</div>
             <p className="mt-4 max-w-2xl text-sm text-slate-400">{h.about.honesty}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

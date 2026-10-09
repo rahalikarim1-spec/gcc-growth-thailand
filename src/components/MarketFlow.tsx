@@ -24,8 +24,8 @@ const BKK = { x: 300, y: 420 };
 
 export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
   return (
-    <figure className="rounded-3xl border border-white/12 bg-ink-900/80 p-4 shadow-2xl sm:p-6" aria-label={v.label}>
-      <svg viewBox="0 0 380 500" role="img" aria-label={v.label} className="mx-auto h-auto w-full max-w-[460px]" fill="none">
+    <figure className="ml-auto w-full max-w-[26rem] rounded-2xl border border-white/10 bg-ink-950/55 p-3 backdrop-blur-[3px] sm:p-4 lg:max-w-[18rem]" aria-label={v.label}>
+      <svg viewBox="0 0 380 500" role="img" aria-label={v.label} className="mx-auto h-auto w-full" fill="none">
         <defs>
           <linearGradient id="mf-line" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0" stopColor="#e4bb6a" />
@@ -73,15 +73,15 @@ export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
         <text x={BKK.x - 18} y={BKK.y + 38} textAnchor="end" fontSize="10" fill="#a8b3c5" fontFamily="ui-monospace, monospace">{fmt(13.75, 100.5)}</text>
       </svg>
 
-      <ol className="mt-2 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-4">
+      <ol className="mt-1 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-4 lg:grid-cols-2">
         {v.steps.map((s, i) => (
-          <li key={s} className="bg-ink-900 px-3 py-3 text-sm text-slate-200">
+          <li key={s} className="bg-ink-950/80 px-2.5 py-2 text-xs text-slate-200">
             <span className="block font-mono text-[0.7rem] text-signal-bright">{String(i + 1).padStart(2, "0")}</span>
             {s}
           </li>
         ))}
       </ol>
-      <figcaption className="mt-3 flex flex-wrap justify-between gap-2 text-xs text-slate-400">
+      <figcaption className="mt-2 flex flex-wrap justify-between gap-x-3 gap-y-1 text-[0.7rem] text-slate-400">
         <span>{v.caption}</span>
         <span className="font-mono">{v.coordsNote}</span>
       </figcaption>
