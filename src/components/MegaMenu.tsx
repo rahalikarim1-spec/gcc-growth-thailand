@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { HotBadge } from "./HotBadge";
 
-export interface MenuItem { href: string; label: string; desc?: string }
+export interface MenuItem { href: string; label: string; desc?: string; hot?: string }
 
 interface Props {
   id: string;
@@ -37,7 +38,7 @@ export function MegaMenu({ id, label, items, all, open, onToggle }: Props) {
           {items.map((it) => (
             <li key={it.href}>
               <Link href={it.href} className="block rounded-lg px-3 py-2.5 hover:bg-white/8">
-                <span className="block text-[0.9375rem] font-medium text-white">{it.label}</span>
+                <span className="flex items-center gap-2 text-[0.9375rem] font-medium text-white">{it.label}{it.hot && <HotBadge label={it.hot} tone="dark" />}</span>
                 {it.desc && <span className="mt-0.5 block text-sm leading-snug text-slate-400">{it.desc}</span>}
               </Link>
             </li>

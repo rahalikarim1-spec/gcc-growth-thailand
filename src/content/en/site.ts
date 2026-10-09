@@ -41,6 +41,8 @@ export const site: Pick<
     },
     relatedServicesForIndustry: { title: "Services that fit this industry" },
     explore: "Explore",
+    hot: "HOT",
+    optimiseFor: "What this channel optimises for",
     faq: "Frequently asked questions",
     markets: "Markets",
     industries: "Industries",
@@ -67,6 +69,7 @@ export const site: Pick<
     disclaimer:
       "Marketing services only. Clinical advice, diagnosis and treatment remain the responsibility of licensed medical providers. No results are guaranteed.",
     contact: "Contact",
+    industriesTitle: "Industries",
   },
   cta: {
     primary: "Explore Your GCC Market Opportunity",
@@ -86,7 +89,7 @@ export const site: Pick<
   industriesHub: {
     metaTitle: "Industries: GCC Customer Acquisition for Thailand Businesses | Wadhah Belhassen",
     metaDescription:
-      "Hair transplant, dental, medical tourism, hotels, travel, Muay Thai and real estate: how Thailand businesses can add GCC and Arabic-speaking customers.",
+      "Hair transplant, dental, medical tourism, restaurants, hotels, travel, Muay Thai and real estate: how Thailand businesses can add GCC and Arabic-speaking customers.",
     h1: "Built for Thailand Businesses Ready to Reach GCC Customers",
     intro:
       "Medical tourism is the strongest current opportunity, but the same GCC acquisition logic applies across high-value Thailand businesses with an international audience.",
@@ -131,6 +134,7 @@ export const site: Pick<
       "Dental clinic",
       "Medical / aesthetic clinic",
       "Medical tourism business",
+      "Restaurant / F&B",
       "Hotel / hospitality",
       "Travel agency / tour operator",
       "Muay Thai camp / fitness",

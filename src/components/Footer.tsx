@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { localePath, locales, localeMeta, type Locale } from "@/lib/i18n";
-import { MARKETS } from "@/lib/routes";
+import { INDUSTRY_SLUGS, MARKETS } from "@/lib/routes";
+import { HotBadge } from "./HotBadge";
 import { person } from "@/lib/site";
 import type { Dictionary } from "@/content/types";
 
@@ -8,7 +9,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const nav = [
     { href: localePath(locale, "/services"), label: dict.nav.services },
     { href: localePath(locale, "/industries"), label: dict.nav.industries },
-    { href: localePath(locale) + `#${dict.home.about.id}`, label: dict.nav.about },
+    { href: localePath(locale, "/about"), label: dict.nav.about },
     { href: localePath(locale, "/insights"), label: dict.nav.insights },
     { href: localePath(locale, "/contact"), label: dict.nav.contact },
   ];
@@ -16,7 +17,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const link = "text-slate-200 hover:text-white hover:underline";
   return (
     <footer className="on-dark bg-ink-950 text-slate-200">
-      <div className="container-x grid gap-12 py-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
+      <div className="container-x grid gap-12 py-16 lg:grid-cols-[1.4fr_0.9fr_1fr_0.9fr_0.9fr_0.8fr]">
         <div>
           <p className="text-lg font-semibold text-white">{dict.brand.name}</p>
           <p className="mt-1 text-sm text-signal-bright">{dict.brand.role}</p>
@@ -26,6 +27,17 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <h2 className={col}>{dict.footer.navTitle}</h2>
           <ul className="mt-4 grid gap-2.5 text-sm">
             {nav.map((n) => <li key={n.href}><Link className={link} href={n.href}>{n.label}</Link></li>)}
+          </ul>
+        </nav>
+        <nav aria-label={dict.footer.industriesTitle}>
+          <h2 className={col}>{dict.footer.industriesTitle}</h2>
+          <ul className="mt-4 grid gap-2.5 text-sm">
+            {INDUSTRY_SLUGS.map((s) => (
+              <li key={s} className="flex items-center gap-2">
+                <Link className={link} href={localePath(locale, `/industries/${s}`)}>{dict.industries[s].navLabel}</Link>
+                {s === "restaurants" && <HotBadge label={dict.ui.hot} tone="dark" />}
+              </li>
+            ))}
           </ul>
         </nav>
         <div>

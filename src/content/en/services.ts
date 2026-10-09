@@ -116,7 +116,7 @@ export const services: Dictionary["services"] = {
       ],
     },
     industriesIntro:
-      "Search demand is clearest where people actively look for a Thailand service: [hair transplant](industry:hair-transplant), [dental](industry:dental-clinics) and [medical tourism](industry:medical-tourism) clinics, [travel agencies](industry:travel) and [Muay Thai camps](industry:muay-thai).",
+      "Search demand is clearest where people actively look for a Thailand service: [hair transplant](industry:hair-transplant), [dental](industry:dental-clinics) and [medical tourism](industry:medical-tourism) clinics, [restaurants](industry:restaurants), [travel agencies](industry:travel) and [Muay Thai camps](industry:muay-thai).",
     marketsIntro: "Budgets are split by country and intent, so Saudi Arabia, UAE, Kuwait, Qatar and Oman are each judged on their own results.",
     faqs: [
       { q: "Will you take over our existing Google Ads account?", a: "Not unless you want that. Typically I build a separate GCC structure, and your agency continues to manage your current campaigns." },
@@ -152,7 +152,7 @@ export const services: Dictionary["services"] = {
         { title: "International SEO architecture", body: "Language folders, hreflang, canonicals and sitemaps set up so Arabic pages are indexed and served to the right audience." },
         { title: "Content and page specifications", body: "Briefs for service, destination and treatment pages, written for Arabic searchers rather than translated." },
         { title: "Technical review", body: "Crawlability, rendering, speed and RTL issues, handed to your developers as clear tickets." },
-        { title: "Local visibility", body: "Google Business Profile and local signals for hospitality and clinics where relevant." },
+        { title: "Local visibility", body: "Google Business Profile, Maps and local signals for restaurants, hospitality and clinics where relevant." },
       ],
     },
     collaboration: {
@@ -179,7 +179,7 @@ export const services: Dictionary["services"] = {
       ],
     },
     industriesIntro:
-      "Organic visibility pays off where research is long and trust matters: [dental clinics](industry:dental-clinics), [medical tourism](industry:medical-tourism), [hotels](industry:hotels) and [travel](industry:travel) businesses.",
+      "Organic visibility pays off where research is long and trust matters, or where Maps and local search decide the visit: [restaurants](industry:restaurants), [dental clinics](industry:dental-clinics), [medical tourism](industry:medical-tourism), [hotels](industry:hotels) and [travel](industry:travel) businesses.",
     marketsIntro: "Arabic content is planned with country differences in mind, rather than as a single generic Arabic version.",
     faqs: [
       { q: "Can't we just translate our website into Arabic?", a: "Translation alone is rarely enough. It misses Arabic search phrasing and usually needs layout, RTL and structural changes. Proper [localized pages](service:arabic-landing-pages) are built for how Arabic speakers search and decide." },
@@ -242,7 +242,7 @@ export const services: Dictionary["services"] = {
       ],
     },
     industriesIntro:
-      "Landing page quality decides results most when the enquiry is high-value: [hair transplant](industry:hair-transplant) and [dental](industry:dental-clinics) clinics, [Muay Thai camps](industry:muay-thai) and [real estate](industry:real-estate).",
+      "Landing page quality decides results most when the enquiry is high-value: [hair transplant](industry:hair-transplant) and [dental](industry:dental-clinics) clinics, [restaurants](industry:restaurants), [Muay Thai camps](industry:muay-thai) and [real estate](industry:real-estate).",
     marketsIntro: "Page variants can reflect country-level differences in offer, trust cues and contact preference.",
     faqs: [
       { q: "Do you build the pages or just design them?", a: "Either, depending on your setup. Your developers can build from my specifications, or we can collaborate on implementation. I don't take over your main website." },
@@ -305,7 +305,7 @@ export const services: Dictionary["services"] = {
       ],
     },
     industriesIntro:
-      "Tracking is critical where the sale happens after the click: [hair transplant](industry:hair-transplant) and [medical tourism](industry:medical-tourism) clinics, [real estate](industry:real-estate) and [hotels](industry:hotels).",
+      "Tracking is critical where the sale happens after the click: [hair transplant](industry:hair-transplant) and [medical tourism](industry:medical-tourism) clinics, [restaurants](industry:restaurants) (directions, calls and reservations), [real estate](industry:real-estate) and [hotels](industry:hotels).",
     marketsIntro: "Reporting is structured by country so each GCC market can be compared on cost per qualified enquiry.",
     faqs: [
       { q: "Will this interfere with our existing GA4 or tags?", a: "No. I work with your existing GA4 and GTM setup — auditing first, then extending it, with your developers' approval." },

@@ -19,13 +19,13 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     },
     industries: {
       label: dict.nav.industries,
-      items: INDUSTRY_SLUGS.map((s) => ({ href: localePath(locale, `/industries/${s}`), label: dict.industries[s].navLabel })),
+      items: INDUSTRY_SLUGS.map((s) => ({ href: localePath(locale, `/industries/${s}`), label: dict.industries[s].navLabel, hot: s === "restaurants" ? dict.ui.hot : undefined })),
       all: { href: localePath(locale, "/industries"), label: dict.nav.allIndustries },
     },
     links: [
       { href: localePath(locale) + `#${dict.home.how.id}`, label: dict.nav.howItWorks },
       { href: localePath(locale, "/insights"), label: dict.nav.insights },
-      { href: localePath(locale) + `#${dict.home.about.id}`, label: dict.nav.about },
+      { href: localePath(locale, "/about"), label: dict.nav.about },
     ],
     cta: { href: localePath(locale, "/contact"), label: dict.nav.audit },
     labels: { menu: dict.nav.menu, close: dict.nav.closeMenu, primary: dict.nav.primary, language: dict.nav.language },

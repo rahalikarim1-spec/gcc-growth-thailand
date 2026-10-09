@@ -4,6 +4,7 @@ import { localePath, type Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/content/types";
 import { MarketFlow } from "./MarketFlow";
 import { TrustStatement } from "./TrustStatement";
+import { HotBadge } from "./HotBadge";
 
 export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const h = dict.home.hero;
@@ -34,11 +35,12 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
       <div className="container-x pb-14">
         <p className="eyebrow !text-slate-400">{h.industriesLabel}</p>
-        <ul className="mt-4 grid grid-cols-2 gap-x-6 sm:grid-cols-4">
-          {h.industries.map((name, i) => (
-            <li key={name} className="flex items-baseline gap-3 border-t border-white/15 py-3 text-[0.95rem] text-slate-100">
+        <ul className="mt-4 grid grid-cols-2 gap-x-6 sm:grid-cols-3">
+          {h.industries.map((it, i) => (
+            <li key={it.name} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-white/15 py-3 text-[0.95rem] text-slate-100">
               <span aria-hidden className="font-mono text-[0.7rem] text-signal-bright">{String(i + 1).padStart(2, "0")}</span>
-              {name}
+              {it.name}
+              {it.hot && <HotBadge label={dict.ui.hot} tone="dark" />}
             </li>
           ))}
         </ul>

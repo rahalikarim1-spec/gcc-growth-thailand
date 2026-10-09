@@ -33,6 +33,8 @@ export interface IndustryPage {
   cardTitle: string;
   cardSummary: string;
   cardLink: string;
+  /** Short statement of what this vertical optimises for (its business model). */
+  model: string;
   metaTitle: string;
   metaDescription: string;
   h1: string;
@@ -40,6 +42,10 @@ export interface IndustryPage {
   problem: TextBlock;
   opportunity: TextBlock;
   funnel: { title: string; intro: string; steps: Step[] };
+  /** Optional discovery/journey flows (used by restaurants). */
+  journeys?: { title: string; intro: string; flows: { label: string; steps: string[] }[]; note: string };
+  /** Optional grid of surfaces/channels that decide the outcome. */
+  channels?: { title: string; intro: string; items: Step[] };
   servicesIntro: string;
   /** Industry-specific reason each linked service matters. */
   serviceNotes: Partial<Record<ServiceSlug, string>>;
@@ -49,7 +55,7 @@ export interface IndustryPage {
   ctaBody: string;
 }
 
-export interface HomeCard { slug: IndustrySlug; title: string; body: string; link: string }
+export interface HomeCard { slug: IndustrySlug; title: string; body: string; link: string; hot?: boolean }
 
 export interface Dictionary {
   locale: Locale;
@@ -66,6 +72,8 @@ export interface Dictionary {
     relatedIndustries: { title: string; intro: string };
     relatedServicesForIndustry: { title: string };
     explore: string;
+    hot: string;
+    optimiseFor: string;
     faq: string;
     markets: string;
     industries: string;
@@ -77,7 +85,7 @@ export interface Dictionary {
   markets: Record<"saudi-arabia" | "uae" | "kuwait" | "qatar" | "oman", string>;
   footer: {
     navTitle: string; marketsTitle: string; externalTitle: string; languagesTitle: string;
-    website: string; linkedin: string; rights: string; disclaimer: string; contact: string;
+    website: string; linkedin: string; rights: string; disclaimer: string; contact: string; industriesTitle: string;
   };
   cta: { primary: string; secondary: string; audit: string };
   home: {
@@ -85,7 +93,7 @@ export interface Dictionary {
     metaDescription: string;
     hero: {
       eyebrow: string; h1: string; lead: string; description: string;
-      trustLead: string; trust: string; industriesLabel: string; industries: string[];
+      trustLead: string; trust: string; industriesLabel: string; industries: { name: string; hot?: boolean }[];
     };
     visual: {
       label: string; origin: string; originSub: string;
@@ -111,11 +119,12 @@ export interface Dictionary {
     services: { h2: string; intro: string; all: string; sectorNote: string };
     about: {
       id: string; h2: string; body: string[]; proof: { value: string; label: string }[];
-      expertiseTitle: string; expertise: string[]; mainSite: string; linkedin: string; honesty: string;
+      expertiseTitle: string; expertise: string[]; mainSite: string; linkedin: string; honesty: string; more: string;
     };
     data: { h2: string; intro: string; items: { title: string; body: string }[]; pending: string; cta: string };
     final: { h2: string; body: string };
   };
+  about: AboutPage;
   servicesHub: { metaTitle: string; metaDescription: string; h1: string; intro: string; collabNote: string };
   industriesHub: { metaTitle: string; metaDescription: string; h1: string; intro: string };
   services: Record<ServiceSlug, ServicePage>;
@@ -137,4 +146,36 @@ export interface Dictionary {
     pendingLabel: string; principlesTitle: string; principles: string[]; cta: string;
   };
   notFound: { title: string; body: string; back: string };
+}
+
+export interface AboutPage {
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  h1: string;
+  role: string;
+  role2: string;
+  positioning: string;
+  card: { title: string; lines: { k: string; v: string }[] };
+  proofNote: string;
+  approach: { h2: string; body: string[]; chain: string[]; closing: string };
+  expertise: { h2: string; intro: string; groups: { title: string; body: string; items: string[] }[] };
+  international: { h2: string; body: string[]; marketsLabel: string; markets: string[] };
+  experience: {
+    h2: string; intro: string;
+    items: { name: string; place: string; type: string; body: string; relevance?: string }[];
+    otherTitle: string; otherBody: string; categories: string[]; note: string;
+  };
+  focus: {
+    h2: string; intro: string;
+    groups: { label: string; hot?: boolean; items: { slug: IndustrySlug; name: string }[] }[];
+    note: string;
+  };
+  why: { h2: string; body: string[]; validateTitle: string; validate: string[]; closing: string };
+  team: { h2: string; quote: string; body: string[]; rolesTitle: string; roles: string[]; closing: string };
+  method: { h2: string; intro: string; steps: Step[] };
+  links: { h2: string; body: string; mainSite: { label: string; desc: string }; linkedin: { label: string; desc: string } };
+  cta: { h2: string; body: string; label: string };
+  servicesTitle: string;
+  servicesIntro: string;
 }

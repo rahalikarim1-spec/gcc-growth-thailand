@@ -13,7 +13,7 @@ export function RelatedIndustries({ locale, dict, slugs, title, intro }: { local
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {slugs.map((s) => (
             <li key={s}>
-              <IndustryCard href={localePath(locale, `/industries/${s}`)} title={dict.industries[s].cardTitle} body={dict.industries[s].cardSummary} link={dict.ui.explore} />
+              <IndustryCard hot={s === "restaurants" ? dict.ui.hot : undefined} href={localePath(locale, `/industries/${s}`)} title={dict.industries[s].cardTitle} body={dict.industries[s].cardSummary} link={dict.ui.explore} />
             </li>
           ))}
         </ul>

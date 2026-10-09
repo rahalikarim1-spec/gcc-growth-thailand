@@ -36,7 +36,7 @@ export default async function IndustriesHub({ params }: Props) {
           <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {INDUSTRY_SLUGS.map((s) => (
               <li key={s}>
-                <IndustryCard href={localePath(lang, `/industries/${s}`)} title={dict.industries[s].cardTitle} body={dict.industries[s].cardSummary} link={dict.industries[s].cardLink} />
+                <IndustryCard hot={s === "restaurants" ? dict.ui.hot : undefined} href={localePath(lang, `/industries/${s}`)} title={dict.industries[s].cardTitle} body={dict.industries[s].cardSummary} link={dict.industries[s].cardLink} />
               </li>
             ))}
           </ul>

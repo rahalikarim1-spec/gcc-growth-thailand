@@ -48,6 +48,7 @@ src/
 ## SEO implementation
 
 Per page: unique `<title>` + description, canonical, `hreflang` (`en`, `th`, `x-default`), Open Graph + Twitter. JSON-LD: `Person`, `ProfessionalService`, `WebSite` (home); `Service` + `BreadcrumbList` + `FAQPage` (service pages — FAQ is visible `<details>` content); `WebPage` + `BreadcrumbList` (industries); `BreadcrumbList` on hubs. No `Organization` schema (no registered entity/address is claimed).
+Pages now include `/about/` (ProfilePage + Person) and `/industries/restaurants/` (flagged HOT via `HotBadge`; per-vertical "optimises for" line comes from `IndustryPage.model`).
 `/insights/` is `noindex` and excluded from the sitemap until verified research exists.
 
 ## Content rules baked in

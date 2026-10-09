@@ -5,7 +5,7 @@ import { languageAlternates } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 // /insights is intentionally excluded: it is noindex until verified research exists.
-const paths = ["", "/services", ...SERVICE_SLUGS.map((s) => `/services/${s}`), "/industries", ...INDUSTRY_SLUGS.map((s) => `/industries/${s}`), "/contact"];
+const paths = ["", "/about", "/services", ...SERVICE_SLUGS.map((s) => `/services/${s}`), "/industries", ...INDUSTRY_SLUGS.map((s) => `/industries/${s}`), "/contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.flatMap((path) =>

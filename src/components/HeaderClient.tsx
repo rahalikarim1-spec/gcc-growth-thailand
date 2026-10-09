@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
+import { HotBadge } from "./HotBadge";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MegaMenu, type MenuItem } from "./MegaMenu";
 
@@ -90,7 +91,7 @@ export function HeaderClient({ data }: { data: HeaderData }) {
               <p className="font-mono text-xs uppercase tracking-widest text-slate-400">{group.label}</p>
               <ul className="mt-2 grid">
                 {group.items.map((it) => (
-                  <li key={it.href}><Link href={it.href} className="block py-2.5 text-base text-white">{it.label}</Link></li>
+                  <li key={it.href}><Link href={it.href} className="flex items-center gap-2 py-2.5 text-base text-white">{it.label}{it.hot && <HotBadge label={it.hot} tone="dark" />}</Link></li>
                 ))}
                 <li><Link href={group.all.href} className="block py-2.5 text-base font-semibold text-signal-bright">{group.all.label} →</Link></li>
               </ul>

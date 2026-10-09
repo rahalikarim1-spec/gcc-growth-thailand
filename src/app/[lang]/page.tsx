@@ -98,10 +98,10 @@ export default async function HomePage({ params }: Props) {
         <div className="container-x">
           <h2 id="who-title" className="h-section max-w-3xl">{h.who.h2}</h2>
           <p className="lead mt-4 max-w-2xl">{h.who.intro}</p>
-          <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {h.who.cards.map((c, i) => (
               <li key={`${c.slug}-${i}`}>
-                <IndustryCard href={localePath(lang, `/industries/${c.slug}`)} title={c.title} body={c.body} link={c.link} />
+                <IndustryCard hot={c.hot ? dict.ui.hot : undefined} href={localePath(lang, `/industries/${c.slug}`)} title={c.title} body={c.body} link={c.link} />
               </li>
             ))}
           </ul>
@@ -153,6 +153,9 @@ export default async function HomePage({ params }: Props) {
             <div className="lead mt-6 grid max-w-2xl gap-4">{h.about.body.map((p) => <p key={p}>{p}</p>)}</div>
             <p className="mt-4 max-w-2xl text-sm text-slate-400">{h.about.honesty}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link href={localePath(lang, "/about")} className="btn btn-primary-dark">
+                {h.about.more}<ArrowRight aria-hidden className="arrow size-4" />
+              </Link>
               <a href={person.mainSite} target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark">
                 {h.about.mainSite}<ExternalLink aria-hidden className="size-4" /><span className="sr-only">{dict.ui.opensNewTab}</span>
               </a>
@@ -164,7 +167,7 @@ export default async function HomePage({ params }: Props) {
           <div>
             <dl className="grid grid-cols-3 gap-4 border-b border-white/15 pb-8">
               {h.about.proof.map((p) => (
-                <div key={p.label}>
+                <div key={p.label} className="flex flex-col">
                   <dt className="order-2 mt-1 text-sm text-slate-300">{p.label}</dt>
                   <dd className="order-1 text-3xl font-semibold text-signal-bright sm:text-4xl">{p.value}</dd>
                 </div>

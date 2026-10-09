@@ -12,6 +12,7 @@ export const INDUSTRY_SLUGS = [
   "hair-transplant",
   "dental-clinics",
   "medical-tourism",
+  "restaurants",
   "hotels",
   "travel",
   "muay-thai",
@@ -28,11 +29,11 @@ export function isIndustrySlug(v: string): v is IndustrySlug {
 
 /** Semantic relationships. Locale-independent: copy lives in the content layer. */
 export const serviceIndustries: Record<ServiceSlug, IndustrySlug[]> = {
-  "gcc-market-entry": ["hair-transplant", "dental-clinics", "medical-tourism", "hotels", "real-estate"],
-  "google-ads-gcc": ["hair-transplant", "dental-clinics", "medical-tourism", "travel", "muay-thai"],
-  "arabic-seo": ["dental-clinics", "medical-tourism", "hotels", "travel"],
-  "arabic-landing-pages": ["hair-transplant", "dental-clinics", "muay-thai", "real-estate"],
-  "conversion-tracking": ["hair-transplant", "medical-tourism", "real-estate", "hotels"],
+  "gcc-market-entry": ["hair-transplant", "dental-clinics", "medical-tourism", "restaurants", "hotels", "real-estate"],
+  "google-ads-gcc": ["hair-transplant", "dental-clinics", "restaurants", "medical-tourism", "travel", "muay-thai"],
+  "arabic-seo": ["restaurants", "dental-clinics", "medical-tourism", "hotels", "travel"],
+  "arabic-landing-pages": ["hair-transplant", "dental-clinics", "restaurants", "muay-thai", "real-estate"],
+  "conversion-tracking": ["hair-transplant", "restaurants", "medical-tourism", "real-estate", "hotels"],
   "customer-journey-optimization": ["medical-tourism", "hair-transplant", "hotels", "travel"],
 };
 
@@ -49,6 +50,7 @@ export const industryServices: Record<IndustrySlug, ServiceSlug[]> = {
   "hair-transplant": ["gcc-market-entry", "google-ads-gcc", "arabic-landing-pages", "conversion-tracking"],
   "dental-clinics": ["arabic-seo", "google-ads-gcc", "arabic-landing-pages", "conversion-tracking"],
   "medical-tourism": ["gcc-market-entry", "arabic-seo", "google-ads-gcc", "conversion-tracking"],
+  restaurants: ["arabic-seo", "google-ads-gcc", "arabic-landing-pages", "conversion-tracking", "gcc-market-entry"],
   hotels: ["gcc-market-entry", "arabic-seo", "google-ads-gcc"],
   travel: ["gcc-market-entry", "google-ads-gcc", "arabic-seo"],
   "muay-thai": ["google-ads-gcc", "arabic-landing-pages", "conversion-tracking"],
@@ -59,8 +61,9 @@ export const industryRelatedIndustries: Record<IndustrySlug, IndustrySlug[]> = {
   "hair-transplant": ["medical-tourism", "dental-clinics"],
   "dental-clinics": ["hair-transplant", "medical-tourism"],
   "medical-tourism": ["hair-transplant", "dental-clinics", "hotels"],
-  hotels: ["travel", "medical-tourism"],
-  travel: ["hotels", "muay-thai"],
+  restaurants: ["hotels", "travel", "muay-thai"],
+  hotels: ["travel", "restaurants", "medical-tourism"],
+  travel: ["hotels", "restaurants", "muay-thai"],
   "muay-thai": ["travel", "hotels"],
   "real-estate": ["hotels", "travel"],
 };

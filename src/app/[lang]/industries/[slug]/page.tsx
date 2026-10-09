@@ -10,6 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { RichText } from "@/components/RichText";
+import { JourneyFlow } from "@/components/JourneyFlow";
 import { ProcessStep } from "@/components/ProcessStep";
 import { CTASection } from "@/components/CTASection";
 import { RelatedIndustries } from "@/components/RelatedIndustries";
@@ -56,21 +57,53 @@ export default async function IndustryPage({ params }: Props) {
   return (
     <>
       <JsonLd data={[pageSchema, breadcrumbSchema(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) })))]} />
-      <PageHero crumbs={crumbs} crumbsLabel={dict.ui.breadcrumbs} h1={p.h1} lead={p.intro} cta={{ href: localePath(lang, "/contact"), label: dict.cta.audit }} />
+      <PageHero badge={slug === "restaurants" ? dict.ui.hot : undefined} crumbs={crumbs} crumbsLabel={dict.ui.breadcrumbs} h1={p.h1} lead={p.intro} note={`${dict.ui.optimiseFor}: ${p.model}`} cta={{ href: localePath(lang, "/contact"), label: dict.cta.audit }} />
 
       <section aria-labelledby="problem" className="section-y">
         <div className="container-x grid gap-10 lg:grid-cols-[1fr_1.4fr]">
           <h2 id="problem" className="h-section">{p.problem.title}</h2>
-          <div className="prose-body lead max-w-2xl">{p.problem.body.map((t) => <p key={t}>{t}</p>)}</div>
+          <div className="prose-body rich lead max-w-2xl">{p.problem.body.map((t) => <p key={t}><RichText text={t} locale={lang} /></p>)}</div>
         </div>
       </section>
 
       <section aria-labelledby="opportunity" className="section-y border-t border-line bg-paper-2/60">
         <div className="container-x grid gap-10 lg:grid-cols-[1fr_1.4fr]">
           <h2 id="opportunity" className="h-section">{p.opportunity.title}</h2>
-          <div className="prose-body lead max-w-2xl">{p.opportunity.body.map((t) => <p key={t}>{t}</p>)}</div>
+          <div className="prose-body rich lead max-w-2xl">{p.opportunity.body.map((t) => <p key={t}><RichText text={t} locale={lang} /></p>)}</div>
         </div>
       </section>
+
+      {p.journeys && (
+        <section aria-labelledby="journeys" className="on-dark relative isolate overflow-hidden bg-ink-900 text-white">
+          <div aria-hidden className="grid-bg absolute inset-0 -z-10 opacity-60 [mask-image:linear-gradient(to_bottom,#000,transparent)]" />
+          <div className="container-x section-y">
+            <h2 id="journeys" className="h-section max-w-3xl">{p.journeys.title}</h2>
+            <p className="lead mt-4 max-w-3xl">{p.journeys.intro}</p>
+            <div className="mt-10 grid gap-6">
+              {p.journeys.flows.map((f) => <JourneyFlow key={f.label} label={f.label} steps={f.steps} />)}
+            </div>
+            <p className="mt-6 max-w-3xl border-s-2 border-gold-bright ps-4 text-slate-100">{p.journeys.note}</p>
+          </div>
+        </section>
+      )}
+
+      {p.channels && (
+        <section aria-labelledby="channels" className="section-y">
+          <div className="container-x">
+            <h2 id="channels" className="h-section max-w-3xl">{p.channels.title}</h2>
+            <p className="lead mt-4 max-w-3xl">{p.channels.intro}</p>
+            <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {p.channels.items.map((it, i) => (
+                <li key={it.title} className="card flex flex-col p-6">
+                  <span className="font-mono text-xs text-signal">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-2 text-lg font-semibold">{it.title}</h3>
+                  <p className="rich mt-2 text-muted"><RichText text={it.body} locale={lang} /></p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <section aria-labelledby="funnel" className="on-dark bg-ink-900 text-white">
         <div className="container-x section-y">
