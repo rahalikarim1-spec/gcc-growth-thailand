@@ -1,0 +1,181 @@
+import type { Dictionary } from "../types";
+
+export const site: Pick<
+  Dictionary,
+  "locale" | "brand" | "nav" | "ui" | "markets" | "footer" | "cta" | "servicesHub" | "industriesHub" | "contact" | "form" | "insights" | "notFound"
+> = {
+  locale: "en",
+  brand: {
+    name: "Wadhah Belhassen",
+    role: "GCC & Arabic Market Growth Specialist",
+    statement:
+      "Helping Thailand and Southeast Asian businesses build measurable customer acquisition channels across GCC and Arabic-speaking markets.",
+  },
+  nav: {
+    services: "Services",
+    industries: "Industries",
+    howItWorks: "How It Works",
+    insights: "Insights",
+    about: "About",
+    contact: "Contact",
+    audit: "Request Market Audit",
+    menu: "Menu",
+    closeMenu: "Close menu",
+    allServices: "All services",
+    allIndustries: "All industries",
+    skip: "Skip to main content",
+    primary: "Primary",
+    language: "Language",
+    home: "Wadhah Belhassen — home",
+  },
+  ui: {
+    home: "Home",
+    breadcrumbs: "Breadcrumb",
+    relatedServices: {
+      title: "Related services",
+      intro: "Most GCC acquisition channels work best as a connected system. These services pair naturally with this one.",
+    },
+    relatedIndustries: {
+      title: "Related industries",
+      intro: "Businesses that share audiences, search journeys or buying behaviour with this page.",
+    },
+    relatedServicesForIndustry: { title: "Services that fit this industry" },
+    explore: "Explore",
+    faq: "Frequently asked questions",
+    markets: "Markets",
+    industries: "Industries",
+    yourTeam: "Your team keeps",
+    wadhah: "Wadhah takes on",
+    opensNewTab: "(opens in a new tab)",
+    sectionProcess: "Process",
+  },
+  markets: {
+    "saudi-arabia": "Saudi Arabia",
+    uae: "United Arab Emirates",
+    kuwait: "Kuwait",
+    qatar: "Qatar",
+    oman: "Oman",
+  },
+  footer: {
+    navTitle: "Navigate",
+    marketsTitle: "Markets",
+    externalTitle: "Elsewhere",
+    languagesTitle: "Languages",
+    website: "Wadhah.digital",
+    linkedin: "LinkedIn",
+    rights: "All rights reserved.",
+    disclaimer:
+      "Marketing services only. Clinical advice, diagnosis and treatment remain the responsibility of licensed medical providers. No results are guaranteed.",
+    contact: "Contact",
+  },
+  cta: {
+    primary: "Explore Your GCC Market Opportunity",
+    secondary: "Request a Market Audit",
+    audit: "Request a Market Audit",
+  },
+  servicesHub: {
+    metaTitle: "GCC & Arabic Customer Acquisition Services | Wadhah Belhassen",
+    metaDescription:
+      "Google Ads, Arabic SEO, localized landing pages and conversion tracking for Thailand businesses that want GCC customers — added alongside your current team.",
+    h1: "GCC & Arabic Customer Acquisition Services",
+    intro:
+      "Expand into GCC markets without rebuilding your entire marketing operation. Each service below plugs into the website, team and campaigns you already run.",
+    collabNote:
+      "Every engagement is built around your existing agency, developers and in-house team — not around replacing them.",
+  },
+  industriesHub: {
+    metaTitle: "Industries: GCC Customer Acquisition for Thailand Businesses | Wadhah Belhassen",
+    metaDescription:
+      "Hair transplant, dental, medical tourism, hotels, travel, Muay Thai and real estate: how Thailand businesses can add GCC and Arabic-speaking customers.",
+    h1: "Built for Thailand Businesses Ready to Reach GCC Customers",
+    intro:
+      "Medical tourism is the strongest current opportunity, but the same GCC acquisition logic applies across high-value Thailand businesses with an international audience.",
+  },
+  contact: {
+    metaTitle: "Request a GCC Market Audit | Wadhah Belhassen",
+    metaDescription:
+      "Tell me about your business and the GCC markets you want to reach. I'll come back with an honest view of whether and where the opportunity is.",
+    h1: "Request a GCC Market Audit",
+    intro:
+      "Share a few details about your business. I'll review your current digital setup and come back with an honest view of where the GCC and Arabic-speaking opportunity is — and whether it fits you.",
+    expectTitle: "What happens next",
+    expect: [
+      "I review your website, current marketing setup and target services.",
+      "I reply personally with initial observations and, if it makes sense, propose a short discovery call.",
+      "Your existing agency, developers or in-house team are welcome to join the conversation.",
+    ],
+    altTitle: "Prefer to talk first?",
+    altBody: "You can also reach out on LinkedIn.",
+  },
+  form: {
+    name: "Your name",
+    company: "Company",
+    website: "Website",
+    businessType: "Business type",
+    targetMarket: "Target market",
+    situation: "Current marketing situation",
+    contactField: "Email or WhatsApp",
+    contactHint: "Where should I reply?",
+    message: "Anything else I should know?",
+    optional: "optional",
+    submit: "Request a Market Audit",
+    sending: "Sending…",
+    successTitle: "Thank you — your request is in.",
+    successBody: "I'll review your details and reply personally using the contact you provided.",
+    errorTitle: "Your request could not be sent.",
+    errorBody: "Please try again in a moment, or contact me directly on LinkedIn.",
+    required: "This field is required.",
+    invalidContact: "Enter a valid email address or WhatsApp number.",
+    businessTypes: [
+      "Hair transplant clinic",
+      "Dental clinic",
+      "Medical / aesthetic clinic",
+      "Medical tourism business",
+      "Hotel / hospitality",
+      "Travel agency / tour operator",
+      "Muay Thai camp / fitness",
+      "Real estate",
+      "Other",
+    ],
+    markets: ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Oman", "Not sure yet"],
+    situations: [
+      "No marketing team yet",
+      "In-house marketing team",
+      "Working with a marketing agency",
+      "Agency and in-house team",
+      "Not sure",
+    ],
+    select: "Select…",
+    privacy: "Your details are used only to respond to this request.",
+  },
+  insights: {
+    metaTitle: "GCC Market Research | Wadhah Belhassen",
+    metaDescription: "Research framework for GCC and Arabic-speaking demand toward Thailand businesses. Verified data will be published here.",
+    h1: "GCC Market Research",
+    intro:
+      "Proprietary research on GCC demand for Thailand services is being prepared. Nothing is published here until each figure is verified against a named source.",
+    status: "In preparation",
+    areasTitle: "What the research will cover",
+    areas: [
+      { title: "Tourism flows", body: "Travel patterns from GCC source markets to Thailand, by market and season." },
+      { title: "Google search demand", body: "Arabic and English search volumes for treatments, destinations and services." },
+      { title: "Keyword competition & CPC signals", body: "Where auction pressure is high, and where demand is under-served." },
+      { title: "Competitor visibility", body: "Who currently appears for Arabic queries, and what their journey looks like." },
+      { title: "Customer journey", body: "How GCC customers research, compare and make contact before booking." },
+      { title: "Landing-page experience", body: "What converts on mobile, in Arabic, for each country and offer." },
+    ],
+    pendingLabel: "Verified data pending",
+    principlesTitle: "Publishing principles",
+    principles: [
+      "Every statistic carries a named source and a date.",
+      "No estimates presented as facts.",
+      "Methodology is published alongside the charts.",
+    ],
+    cta: "Request a Market Audit",
+  },
+  notFound: {
+    title: "Page not found",
+    body: "The page you are looking for does not exist or has moved.",
+    back: "Back to the homepage",
+  },
+};
