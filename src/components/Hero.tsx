@@ -13,7 +13,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     <section aria-labelledby="hero-title" className="on-dark relative isolate overflow-hidden bg-ink-950 text-white">
       {/* Atmospheric portrait: decorative, dimmed, desaturated; copy side stays near-solid navy. */}
       <div aria-hidden className="absolute inset-0 -z-30 overflow-hidden">
-        <div className="absolute inset-0 lg:-top-[7%] lg:bottom-0 lg:left-auto lg:w-[64%]">
+        <div className="absolute inset-x-0 top-[14rem] h-[50rem] max-lg:[mask-image:linear-gradient(to_bottom,transparent,#000_12%,#000_74%,transparent)] sm:inset-x-auto sm:right-0 sm:top-[4rem] sm:h-[38rem] sm:w-[62%] lg:-top-[7%] lg:bottom-0 lg:left-auto lg:h-auto lg:w-[64%]">
           <Image
             src="/images/wadhah-belhassen.jpg"
             alt=""
@@ -21,16 +21,16 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             quality={60}
             loading="eager"
             fetchPriority="low"
-            sizes="(min-width: 1024px) 64vw, 100vw"
-            className="object-cover object-[70%_12%] opacity-[0.22] [filter:saturate(0.65)_contrast(1.08)_brightness(0.9)] sm:opacity-30 lg:object-[64%_0%] lg:opacity-[0.78]"
+            sizes="(min-width: 1024px) 64vw, (min-width: 640px) 62vw, 100vw"
+            className="object-cover object-[25%_0%] opacity-[0.45] [filter:saturate(0.7)_contrast(1.1)_brightness(1)] lg:[filter:saturate(0.65)_contrast(1.08)_brightness(0.9)] sm:object-[64%_0%] sm:opacity-[0.46] lg:object-[64%_0%] lg:opacity-[0.78]"
           />
         </div>
       </div>
       {/* Copy-side scrim: >=90% navy across the left ~60% on desktop, fading to the portrait on the right. */}
-      <div aria-hidden className="absolute inset-0 -z-20 bg-gradient-to-b from-ink-950/80 via-ink-950/55 to-ink-950 lg:hidden" />
+      <div aria-hidden className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,rgb(7_12_25_/_0.92)_0%,rgb(7_12_25_/_0.78)_40%,rgb(7_12_25_/_0.2)_72%,rgb(7_12_25_/_0.05)_100%)] lg:hidden" />
       <div aria-hidden className="absolute inset-0 -z-20 hidden bg-[linear-gradient(to_right,var(--color-ink-950)_0%,rgb(7_12_25_/_0.94)_38%,rgb(7_12_25_/_0.8)_56%,rgb(7_12_25_/_0.4)_74%,rgb(7_12_25_/_0.12)_100%)] lg:block" />
       {/* Even dimming over the whole image, plus bottom fade into the industries list. */}
-      <div aria-hidden className="absolute inset-0 -z-20 bg-ink-950/25 lg:bg-ink-950/10" />
+      <div aria-hidden className="absolute inset-0 -z-20 bg-ink-950/10" />
       <div aria-hidden className="absolute inset-x-0 bottom-0 -z-20 h-1/3 bg-gradient-to-t from-ink-950 to-transparent" />
       {/* Brand atmosphere: faint teal wash toward the right, existing grid on top. */}
       <div aria-hidden className="absolute inset-0 -z-20 bg-[radial-gradient(60%_70%_at_88%_30%,rgb(11_122_110_/_0.22),transparent_70%)]" />
@@ -39,8 +39,8 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div>
           <p className="eyebrow">{h.eyebrow}</p>
           <h1 id="hero-title" className="h-display mt-5">{h.h1}</h1>
-          <p className="mt-6 max-w-2xl text-lg font-medium leading-snug text-slate-100 sm:text-xl">{h.lead}</p>
-          <p className="lead mt-4 max-w-2xl">{h.description}</p>
+          <p className="mt-6 max-w-2xl text-lg font-medium leading-snug text-slate-100 max-lg:[text-shadow:0_1px_14px_rgb(7_12_25_/_0.95)] sm:text-xl">{h.lead}</p>
+          <p className="lead mt-4 max-w-2xl max-lg:[text-shadow:0_1px_14px_rgb(7_12_25_/_0.95)]">{h.description}</p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href={localePath(locale, "/services")} className="btn btn-primary-dark">
