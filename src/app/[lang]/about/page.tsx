@@ -8,6 +8,7 @@ import { absoluteUrl, person } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/Breadcrumbs";
 import { HotBadge } from "@/components/HotBadge";
+import { Portrait } from "@/components/Portrait";
 import { JourneyFlow } from "@/components/JourneyFlow";
 import { ProcessStep } from "@/components/ProcessStep";
 import { RichText } from "@/components/RichText";
@@ -75,7 +76,7 @@ export default async function AboutPage({ params }: Props) {
         <div aria-hidden className="absolute -right-32 -top-20 -z-10 size-96 rounded-full bg-signal/20 blur-3xl" />
         <div className="container-x pb-14 pt-12 lg:pb-20 lg:pt-16">
           <Breadcrumbs items={crumbs} label={dict.ui.breadcrumbs} dark />
-          <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1.25fr_0.75fr]">
+          <div className="mt-10 grid items-center gap-12 lg:grid-cols-[1.3fr_0.7fr]">
             <div>
               <p className="eyebrow">{a.eyebrow}</p>
               <h1 className="h-display mt-4">{a.h1}</h1>
@@ -87,23 +88,19 @@ export default async function AboutPage({ params }: Props) {
                 <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark">LinkedIn<ExternalLink aria-hidden className="size-4" /><span className="sr-only">{dict.ui.opensNewTab}</span></a>
               </div>
             </div>
-            <aside aria-label={a.card.title} className="rounded-3xl border border-white/12 bg-ink-900/80 p-6 shadow-2xl">
-              <div className="flex items-center gap-4">
-                <span aria-hidden className="grid size-14 place-items-center rounded-2xl border border-signal-bright/50 font-mono text-xl text-signal-bright">WB</span>
-                <p className="font-mono text-xs uppercase tracking-widest text-slate-400">{a.card.title}</p>
-              </div>
-              <dl className="mt-6 grid gap-4">
-                {a.card.lines.map((l) => (
-                  <div key={l.k} className="border-t border-white/10 pt-3">
-                    <dt className="font-mono text-[0.7rem] uppercase tracking-widest text-slate-400">{l.k}</dt>
-                    <dd className="mt-1 font-medium">{l.v}</dd>
-                  </div>
-                ))}
-              </dl>
-            </aside>
+            <Portrait priority alt={a.portraitAlt} name={a.h1} role={a.role} role2={a.role2} />
           </div>
 
-          <dl className="mt-14 grid grid-cols-3 gap-4 border-t border-white/15 pt-8">
+          <aside aria-label={a.card.title} className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/12 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+            {a.card.lines.map((l) => (
+              <div key={l.k} className="bg-ink-900 px-5 py-4">
+                <p className="font-mono text-[0.7rem] uppercase tracking-widest text-slate-400">{l.k}</p>
+                <p className="mt-1 font-medium">{l.v}</p>
+              </div>
+            ))}
+          </aside>
+
+          <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-white/15 pt-8">
             {proof.map((p) => (
               <div key={p.label} className="flex flex-col">
                 <dt className="order-2 mt-1 text-sm text-slate-300">{p.label}</dt>

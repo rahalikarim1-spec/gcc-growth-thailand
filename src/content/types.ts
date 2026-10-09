@@ -152,6 +152,7 @@ export interface AboutPage {
   metaTitle: string;
   metaDescription: string;
   eyebrow: string;
+  portraitAlt: string;
   h1: string;
   role: string;
   role2: string;

@@ -5,6 +5,7 @@ export const about: Dictionary["about"] = {
   metaDescription:
     "Wadhah Belhassen ที่ปรึกษาด้านการเติบโตทางดิจิทัลระดับนานาชาติ เชี่ยวชาญ Google Ads, SEO, CRO และ GA4/GTM กำลังพัฒนาบริการหาลูกค้า GCC และตลาดอาหรับสำหรับธุรกิจไทย",
   eyebrow: "เกี่ยวกับผม",
+  portraitAlt: "Wadhah Belhassen — ที่ปรึกษาด้านการเติบโตทางดิจิทัลระดับนานาชาติ",
   h1: "Wadhah Belhassen",
   role: "ที่ปรึกษาด้านการเติบโตทางดิจิทัลระดับนานาชาติ",
   role2: "ผู้เชี่ยวชาญด้านการเติบโตในตลาด GCC และตลาดอาหรับ",
