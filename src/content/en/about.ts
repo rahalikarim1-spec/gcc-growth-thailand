@@ -1,26 +1,42 @@
 import type { Dictionary } from "../types";
 
 export const about: Dictionary["about"] = {
-  metaTitle: "About Wadhah Belhassen | GCC & Arabic Market Growth Specialist",
+  metaTitle: "About Wadhah Belhassen | GCC Market Entry & Growth Consultant",
   metaDescription:
-    "Wadhah Belhassen is an international digital growth consultant (Google Ads, SEO, CRO, GA4/GTM) building a specialized GCC and Arabic customer acquisition offer for Thailand businesses.",
+    "Wadhah Belhassen is a GCC Market Entry & Growth Consultant who has lived and worked across the Gulf, North Africa and Europe, helping businesses in Thailand and Malaysia reach GCC customers.",
   eyebrow: "About",
-  portraitAlt: "Wadhah Belhassen — International Digital Growth Consultant",
+  portraitAlt: "Wadhah Belhassen — GCC Market Entry & Growth Consultant",
   h1: "Wadhah Belhassen",
-  role: "International Digital Growth Consultant",
-  role2: "GCC & Arabic Market Growth Specialist",
+  role: "GCC Market Entry & Growth Consultant",
+  role2: "GCC Customer Acquisition for Businesses in Thailand & Malaysia",
   positioning:
-    "I help businesses win customers in markets they don't reach yet. Right now that means GCC and Arabic-speaking customers for businesses in Thailand: I research the opportunity first, then build and measure the acquisition system alongside the team and infrastructure you already have.",
+    "I help Southeast Asian businesses enter, reach and convert GCC and Arabic-speaking markets. My perspective was built across the Gulf, North Africa and Europe; my work is the connection between a market, its customers and a measurable acquisition channel.",
   card: {
     title: "At a glance",
     lines: [
-      { k: "Focus", v: "Thailand → GCC & Arabic markets" },
-      { k: "Disciplines", v: "Google Ads · SEO · CRO · Analytics" },
-      { k: "Worked across", v: "Germany · Tunisia · Italy · Canada" },
+      { k: "Focus", v: "Thailand & Malaysia → GCC & Arabic markets" },
+      { k: "Lived & worked", v: "Qatar · UAE · Tunisia · Germany" },
+      { k: "Projects across", v: "Germany · Italy · Tunisia · Canada · GCC" },
       { k: "Works with", v: "Your agency, developers and in-house team" },
     ],
   },
   proofNote: "Experience indicators from international projects. They describe my background, not results you should expect.",
+  across: {
+    h2: "Built Across Markets. Positioned Between Them.",
+    body: [
+      "My perspective was shaped across North Africa, the Gulf and Europe, through years of living, working and building across different markets.",
+      "Having lived in Qatar and Dubai and worked across European and international markets, I understand that entering the GCC is not simply a translation exercise.",
+      "It requires understanding how people search, evaluate trust, communicate, compare options and make decisions.",
+      "Today, I bring that cross-market perspective to Southeast Asia, helping businesses in Thailand and Malaysia understand, reach and convert GCC and Arabic-speaking customers.",
+    ],
+    reinforce: "I don't replace local expertise. I connect it with a market I understand deeply.",
+    cards: [
+      { title: "Gulf experience", places: "Qatar · Dubai / UAE", body: "First-hand cultural and commercial exposure to Gulf business environments, and to the different ways Arabic-speaking customers communicate and decide." },
+      { title: "European business & growth", places: "Germany · European client markets", body: "Professional and entrepreneurial experience in Europe, including growth work for businesses and projects connected to Germany and Italy." },
+      { title: "North African & Arabic foundation", places: "Tunisia", body: "An Arabic, French and English multilingual perspective, and growth work for Tunisian businesses and projects." },
+      { title: "Southeast Asia", places: "Thailand · Malaysia", body: "The current operating focus: connecting businesses in Thailand and Malaysia with GCC demand. A specialized offer built on the experience above, not on existing local clients." },
+    ],
+  },
   approach: {
     h2: "Traffic Is Only One Part of Growth",
     body: [
@@ -31,13 +47,23 @@ export const about: Dictionary["about"] = {
     closing: "This is the main difference in how I work: I look for the weakest link in the chain before recommending more spend.",
   },
   expertise: {
-    h2: "Core Expertise",
-    intro: "Hands-on skills across the full acquisition chain, from demand research to measurement.",
+    h2: "Execution Capability",
+    intro: "Digital marketing is how market-entry thinking becomes a working channel. These are the skills I execute with, across the full acquisition chain.",
     groups: [
       {
-        title: "Google Ads",
+        title: "Market Intelligence",
+        body: "Evidence before advertising spend.",
+        items: ["Google Keyword Planner", "Search demand analysis", "Competitor research", "Market research"],
+      },
+      {
+        title: "Arabic Localization",
+        body: "Adaptation, not translation.",
+        items: ["Arabic market adaptation", "Messaging and tone", "Customer journey analysis", "Multilingual digital strategy"],
+      },
+      {
+        title: "Google Ads & Acquisition",
         body: "Performance marketing built on search intent and clean data.",
-        items: ["Search campaigns", "Performance Max", "Search terms analysis", "Search themes & audience signals", "Negative keyword strategy", "Campaign scaling"],
+        items: ["Search campaigns", "Performance Max", "Search terms analysis", "Search themes & audience signals", "Negative keyword strategy", "Campaign scaling", "Meta Ads", "Lead generation"],
       },
       {
         title: "SEO",
@@ -45,40 +71,16 @@ export const about: Dictionary["about"] = {
         items: ["Technical SEO", "International SEO", "Arabic SEO", "Local SEO", "Google Business Profile", "Google Search Console"],
       },
       {
-        title: "CRO",
+        title: "CRO & Landing Pages",
         body: "Turning existing traffic into more conversations.",
-        items: ["Landing page optimization", "Customer journey analysis", "Microsoft Clarity behavior analysis", "Conversion-focused website strategy"],
+        items: ["Landing page optimization", "Microsoft Clarity behavior analysis", "Conversion-focused website strategy"],
       },
       {
-        title: "Analytics",
-        body: "Understanding what visitors and customers actually do.",
-        items: ["GA4", "Microsoft Clarity", "Funnel and behavior analysis", "Performance reporting"],
-      },
-      {
-        title: "Tracking",
+        title: "Analytics & Tracking",
         body: "Measurement you can trust before budget scales.",
-        items: ["Google Tag Manager", "Conversion tracking", "Form, call, WhatsApp and LINE events", "Attribution setup"],
-      },
-      {
-        title: "Market Research",
-        body: "Evidence before advertising spend.",
-        items: ["Google Keyword Planner", "Search demand analysis", "Competitor research", "Market research"],
-      },
-      {
-        title: "International Acquisition",
-        body: "Entering and testing new markets in a structured way.",
-        items: ["International customer acquisition", "Lead generation", "Meta Ads", "Website strategy"],
+        items: ["GA4", "Google Tag Manager", "Conversion tracking", "Form, call, WhatsApp and LINE events", "Attribution setup"],
       },
     ],
-  },
-  international: {
-    h2: "Growth Across Markets and Business Models",
-    body: [
-      "I have worked on digital growth projects across several markets and business types, including Germany, Tunisia, Italy and Canada, and in wider European and MENA contexts. Local businesses, B2B manufacturers, agriculture, hospitality and local services all behave differently, and that range shapes how I approach a new market.",
-      "The Thailand and GCC proposition is a new, specialized market-expansion initiative built on that existing international acquisition experience. It does not rest on existing Thailand clients. It applies a proven way of working to a market I am researching in depth.",
-    ],
-    marketsLabel: "Markets worked across",
-    markets: ["Germany", "Tunisia", "Italy", "Canada", "Wider Europe & MENA"],
   },
   experience: {
     h2: "Selected Growth Experience",
@@ -89,7 +91,7 @@ export const about: Dictionary["about"] = {
         place: "Berlin, Germany",
         type: "Local hospitality",
         body: "Local business growth: Google Ads, local visibility, store-visit acquisition and digital optimization.",
-        relevance: "The closest parallel to local acquisition for [restaurants](industry:restaurants) in Bangkok.",
+        relevance: "The closest parallel to local acquisition for [restaurants](industry:restaurants) in Thailand and Malaysia.",
       },
       {
         name: "La Ferme Urbaine",
@@ -116,8 +118,8 @@ export const about: Dictionary["about"] = {
     note: "No client testimonials or performance figures are published here.",
   },
   focus: {
-    h2: "Current Thailand Market Focus",
-    intro: "Industries I am researching and building specialized acquisition strategies for in Thailand. This is a market focus, not a list of existing Thailand clients.",
+    h2: "Current Market Focus: Thailand & Malaysia",
+    intro: "Industries I am researching and building specialized acquisition strategies for in Thailand and Malaysia. This is a market focus, not a list of existing clients in either country.",
     groups: [
       {
         label: "Priority",
@@ -145,8 +147,8 @@ export const about: Dictionary["about"] = {
   why: {
     h2: "Why GCC & Arabic Markets, and Why I Validate First",
     body: [
-      "Thailand attracts international customers in categories where search-led acquisition can work: medical and dental care, hospitality, travel, dining, fitness and property. Arabic-speaking audiences are one segment where the digital journey may be thin or missing.",
-      "That does not make the GCC market profitable for every Thailand business, and I won't pretend it does. The opportunity has to be validated before any advertising budget is recommended.",
+      "Thailand and Malaysia attract international customers in categories where search-led acquisition can work: medical and dental care, hospitality, travel, dining, fitness and property. Arabic-speaking audiences are one segment where the digital journey may be thin or missing.",
+      "That does not make the GCC market profitable for every business in Thailand or Malaysia, and I won't pretend it does. The opportunity has to be validated before any advertising budget is recommended.",
     ],
     validateTitle: "What I check first",
     validate: [
@@ -163,7 +165,7 @@ export const about: Dictionary["about"] = {
   },
   team: {
     h2: "I Add Expertise. I Don't Replace Your Team.",
-    quote: "Keep your team. Add the market expertise you're missing.",
+    quote: "Keep your team. Add a new market.",
     body: [
       "You don't need to rebuild your organization to add a new market. I identify the opportunity, create the acquisition strategy and work with your existing specialists to put it in place.",
     ],
@@ -196,7 +198,7 @@ export const about: Dictionary["about"] = {
   },
   links: {
     h2: "Two Websites, Two Purposes",
-    body: "wadhah.digital is my broader international digital growth profile. This website is a focused proposition: helping Thailand and Southeast Asian businesses add GCC and Arabic-speaking customers.",
+    body: "wadhah.digital is my broader international digital growth profile. This website is a focused proposition: GCC market entry and customer acquisition for businesses in Thailand and Malaysia.",
     mainSite: { label: "wadhah.digital", desc: "Broader international digital growth profile" },
     linkedin: { label: "LinkedIn", desc: "Professional background and updates" },
   },

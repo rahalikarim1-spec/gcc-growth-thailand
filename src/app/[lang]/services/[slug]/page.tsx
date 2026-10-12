@@ -53,7 +53,7 @@ export default async function ServicePage({ params }: Props) {
     inLanguage: lang,
     provider: { "@type": "Person", "@id": absoluteUrl("/#person"), name: person.name, url: person.mainSite },
     areaServed: ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Oman"].map((name) => ({ "@type": "Country", name })),
-    audience: { "@type": "BusinessAudience", name: "Businesses in Thailand and Southeast Asia targeting GCC and Arabic-speaking customers" },
+    audience: { "@type": "BusinessAudience", name: "Businesses in Thailand, Malaysia and Southeast Asia targeting GCC and Arabic-speaking customers" },
   };
 
   return (
@@ -109,6 +109,15 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {s.boundary && (
+        <section aria-labelledby="boundary" className="section-y border-b border-line bg-paper-2/60">
+          <div className="container-x grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+            <h2 id="boundary" className="h-section">{s.boundary.title}</h2>
+            <div className="prose-body lead max-w-2xl">{s.boundary.body.map((t) => <p key={t}>{t}</p>)}</div>
+          </div>
+        </section>
+      )}
 
       <section aria-labelledby="process" className="section-y">
         <div className="container-x">

@@ -32,7 +32,7 @@ export function MegaMenu({ id, label, items, all, open, onToggle }: Props) {
       <div
         id={id}
         hidden={!open}
-        className="absolute left-0 top-full z-50 mt-2 w-[min(30rem,90vw)] rounded-2xl border border-white/10 bg-ink-900 p-3 shadow-2xl"
+        className="absolute left-0 top-full z-50 mt-2 max-h-[calc(100dvh-5.5rem)] w-[min(30rem,90vw)] overflow-y-auto overscroll-contain rounded-2xl border border-white/10 bg-ink-900 p-3 shadow-2xl"
       >
         <ul className="grid gap-1">
           {items.map((it) => (

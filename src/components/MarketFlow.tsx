@@ -4,7 +4,8 @@ type NodeId = keyof Dictionary["home"]["visual"]["nodes"];
 
 /**
  * Schematic: real lat/lon of the five GCC capitals are projected (equirectangular, 24px/deg) into the top cluster,
- * then routed down through an "acquisition layer" hub to Bangkok. The Thailand leg is schematic (axis break), not to scale.
+ * then routed down through a "GCC growth layer" hub to two Southeast Asian destinations (Thailand, Malaysia) under a
+ * "Southeast Asia" bracket. The Southeast Asia leg is schematic (axis break), not to scale.
  * Vertical layout keeps SVG text legible at phone width.
  */
 const ORIGIN = { lon: 46, lat: 30 };
@@ -19,8 +20,12 @@ const gulf: { id: NodeId; lat: number; lon: number; lx: number; anchor: "start" 
 const pos = (lat: number, lon: number) => ({ x: (lon - ORIGIN.lon) * SCALE + 36, y: (ORIGIN.lat - lat) * SCALE + 62 });
 const fmt = (lat: number, lon: number) => `${lat.toFixed(1)}°N ${lon.toFixed(1)}°E`;
 
-const HUB = { x: 232, y: 320 };
-const BKK = { x: 300, y: 420 };
+const HUB = { x: 190, y: 296 };
+// Schematic destinations. Coordinates shown are the capitals (Bangkok, Kuala Lumpur), indicative only.
+const SEA = [
+  { id: "thailand" as const, x: 112, y: 392, lat: 13.75, lon: 100.5, ly: 420 },
+  { id: "malaysia" as const, x: 268, y: 410, lat: 3.14, lon: 101.69, ly: 438 },
+];
 
 export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
   return (
@@ -47,8 +52,15 @@ export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
             </g>
           );
         })}
-        <path d={`M${HUB.x} ${HUB.y + 26} C ${HUB.x} ${HUB.y + 70}, ${BKK.x} ${BKK.y - 70}, ${BKK.x} ${BKK.y - 10}`} stroke="rgb(255 255 255 / .18)" strokeWidth="2" />
-        <path className="flow-line" d={`M${HUB.x} ${HUB.y + 26} C ${HUB.x} ${HUB.y + 70}, ${BKK.x} ${BKK.y - 70}, ${BKK.x} ${BKK.y - 10}`} stroke="#5ad6c3" strokeWidth="2.25" strokeLinecap="round" />
+        {SEA.map((d) => {
+          const path = `M${HUB.x} ${HUB.y + 26} C ${HUB.x} ${HUB.y + 70}, ${d.x} ${d.y - 70}, ${d.x} ${d.y - 10}`;
+          return (
+            <g key={d.id}>
+              <path d={path} stroke="rgb(255 255 255 / .18)" strokeWidth="2" />
+              <path className="flow-line" d={path} stroke="#5ad6c3" strokeWidth="2.25" strokeLinecap="round" />
+            </g>
+          );
+        })}
 
         {gulf.map((n, i) => {
           const p = pos(n.lat, n.lon);
@@ -66,11 +78,18 @@ export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
         <circle cx={HUB.x} cy={HUB.y} r="9" fill="#5ad6c3" />
         <text x={HUB.x - 38} y={HUB.y + 5} textAnchor="end" fontSize="13" fontWeight="600" fill="#5ad6c3">{v.hub}</text>
 
-        <circle className="pulse-ring" cx={BKK.x} cy={BKK.y} r="8" fill="#5ad6c3" />
-        <circle cx={BKK.x} cy={BKK.y} r="8" fill="#5ad6c3" stroke="#fff" strokeWidth="2" />
-        <text x={BKK.x - 18} y={BKK.y + 5} textAnchor="end" fontSize="16" fontWeight="700" fill="#fff">{v.origin}</text>
-        <text x={BKK.x - 18} y={BKK.y + 23} textAnchor="end" fontSize="12" fill="#cbd5e1">{v.originSub}</text>
-        <text x={BKK.x - 18} y={BKK.y + 38} textAnchor="end" fontSize="10" fill="#a8b3c5" fontFamily="ui-monospace, monospace">{fmt(13.75, 100.5)}</text>
+        {SEA.map((d, i) => (
+          <g key={d.id}>
+            <circle className="pulse-ring" cx={d.x} cy={d.y} r="8" fill="#5ad6c3" style={{ animationDelay: `${i * 0.6}s` }} />
+            <circle cx={d.x} cy={d.y} r="8" fill="#5ad6c3" stroke="#fff" strokeWidth="2" />
+            <text x={d.x} y={d.ly} textAnchor="middle" fontSize="15" fontWeight="700" fill="#fff">{v.destinations[d.id]}</text>
+            <text x={d.x} y={d.ly + 13} textAnchor="middle" fontSize="10" fill="#a8b3c5" fontFamily="ui-monospace, monospace">{fmt(d.lat, d.lon)}</text>
+          </g>
+        ))}
+
+        {/* Southeast Asia bracket */}
+        <path d="M60 462 V470 H320 V462" stroke="rgb(255 255 255 / .3)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+        <text x="190" y="488" textAnchor="middle" fontSize="11" fill="#cbd5e1" fontFamily="ui-monospace, monospace" letterSpacing={/[\u0E00-\u0E7F]/.test(v.region) ? 0 : 1.5}>{v.region.toUpperCase()}</text>
       </svg>
 
       <ol className="mt-1 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-4 lg:grid-cols-2">

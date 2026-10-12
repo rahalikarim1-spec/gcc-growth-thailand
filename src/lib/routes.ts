@@ -1,10 +1,11 @@
 export const SERVICE_SLUGS = [
   "gcc-market-entry",
+  "market-intelligence",
+  "arabic-localization",
   "google-ads-gcc",
   "arabic-seo",
   "arabic-landing-pages",
   "conversion-tracking",
-  "customer-journey-optimization",
 ] as const;
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 
@@ -30,31 +31,33 @@ export function isIndustrySlug(v: string): v is IndustrySlug {
 /** Semantic relationships. Locale-independent: copy lives in the content layer. */
 export const serviceIndustries: Record<ServiceSlug, IndustrySlug[]> = {
   "gcc-market-entry": ["hair-transplant", "dental-clinics", "medical-tourism", "restaurants", "hotels", "real-estate"],
+  "market-intelligence": ["medical-tourism", "hotels", "travel", "real-estate", "restaurants"],
+  "arabic-localization": ["hair-transplant", "dental-clinics", "medical-tourism", "hotels", "restaurants"],
   "google-ads-gcc": ["hair-transplant", "dental-clinics", "restaurants", "medical-tourism", "travel", "muay-thai"],
   "arabic-seo": ["restaurants", "dental-clinics", "medical-tourism", "hotels", "travel"],
   "arabic-landing-pages": ["hair-transplant", "dental-clinics", "restaurants", "muay-thai", "real-estate"],
   "conversion-tracking": ["hair-transplant", "restaurants", "medical-tourism", "real-estate", "hotels"],
-  "customer-journey-optimization": ["medical-tourism", "hair-transplant", "hotels", "travel"],
 };
 
 export const serviceRelatedServices: Record<ServiceSlug, ServiceSlug[]> = {
-  "gcc-market-entry": ["google-ads-gcc", "arabic-seo", "arabic-landing-pages"],
-  "google-ads-gcc": ["arabic-landing-pages", "conversion-tracking", "gcc-market-entry"],
-  "arabic-seo": ["arabic-landing-pages", "gcc-market-entry", "conversion-tracking"],
-  "arabic-landing-pages": ["google-ads-gcc", "conversion-tracking", "customer-journey-optimization"],
-  "conversion-tracking": ["google-ads-gcc", "customer-journey-optimization", "arabic-landing-pages"],
-  "customer-journey-optimization": ["conversion-tracking", "arabic-landing-pages", "google-ads-gcc"],
+  "gcc-market-entry": ["market-intelligence", "arabic-localization", "google-ads-gcc"],
+  "market-intelligence": ["gcc-market-entry", "arabic-seo", "google-ads-gcc"],
+  "arabic-localization": ["arabic-landing-pages", "arabic-seo", "gcc-market-entry"],
+  "google-ads-gcc": ["arabic-landing-pages", "conversion-tracking", "market-intelligence"],
+  "arabic-seo": ["arabic-localization", "arabic-landing-pages", "market-intelligence"],
+  "arabic-landing-pages": ["arabic-localization", "google-ads-gcc", "conversion-tracking"],
+  "conversion-tracking": ["google-ads-gcc", "arabic-landing-pages", "gcc-market-entry"],
 };
 
 export const industryServices: Record<IndustrySlug, ServiceSlug[]> = {
-  "hair-transplant": ["gcc-market-entry", "google-ads-gcc", "arabic-landing-pages", "conversion-tracking"],
-  "dental-clinics": ["arabic-seo", "google-ads-gcc", "arabic-landing-pages", "conversion-tracking"],
-  "medical-tourism": ["gcc-market-entry", "arabic-seo", "google-ads-gcc", "conversion-tracking"],
+  "hair-transplant": ["gcc-market-entry", "arabic-localization", "google-ads-gcc", "arabic-landing-pages", "conversion-tracking"],
+  "dental-clinics": ["arabic-seo", "google-ads-gcc", "arabic-localization", "arabic-landing-pages", "conversion-tracking"],
+  "medical-tourism": ["gcc-market-entry", "market-intelligence", "arabic-seo", "google-ads-gcc", "arabic-localization", "conversion-tracking"],
   restaurants: ["arabic-seo", "google-ads-gcc", "arabic-landing-pages", "conversion-tracking", "gcc-market-entry"],
-  hotels: ["gcc-market-entry", "arabic-seo", "google-ads-gcc"],
+  hotels: ["gcc-market-entry", "market-intelligence", "arabic-seo", "google-ads-gcc"],
   travel: ["gcc-market-entry", "google-ads-gcc", "arabic-seo"],
   "muay-thai": ["google-ads-gcc", "arabic-landing-pages", "conversion-tracking"],
-  "real-estate": ["gcc-market-entry", "arabic-landing-pages", "google-ads-gcc", "conversion-tracking"],
+  "real-estate": ["gcc-market-entry", "market-intelligence", "arabic-landing-pages", "google-ads-gcc", "conversion-tracking"],
 };
 
 export const industryRelatedIndustries: Record<IndustrySlug, IndustrySlug[]> = {
@@ -71,3 +74,10 @@ export const industryRelatedIndustries: Record<IndustrySlug, IndustrySlug[]> = {
 /** Display order of GCC markets (country-level pages may be added later). */
 export const MARKETS = ["saudi-arabia", "uae", "kuwait", "qatar", "oman"] as const;
 export type MarketSlug = (typeof MARKETS)[number];
+
+/**
+ * Southeast Asian home markets. Reserved for future /thailand/ and /malaysia/ pages (only if backed by real
+ * search demand). Not routed yet; adding Singapore/Indonesia later means extending this list, not repositioning.
+ */
+export const SEA_MARKETS = ["thailand", "malaysia"] as const;
+export type SeaMarketSlug = (typeof SEA_MARKETS)[number];

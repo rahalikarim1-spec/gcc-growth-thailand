@@ -8,6 +8,7 @@ import { absoluteUrl, person } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/Breadcrumbs";
 import { HotBadge } from "@/components/HotBadge";
+import { EdgeComparison } from "@/components/EdgeComparison";
 import { Portrait } from "@/components/Portrait";
 import { JourneyFlow } from "@/components/JourneyFlow";
 import { ProcessStep } from "@/components/ProcessStep";
@@ -46,12 +47,13 @@ export default async function AboutPage({ params }: Props) {
       "@type": "Person",
       "@id": absoluteUrl("/#person"),
       name: person.name,
-      jobTitle: "International Digital Growth Consultant",
+      jobTitle: "GCC Market Entry & Growth Consultant",
       url: person.mainSite,
       sameAs: [person.mainSite, person.linkedin],
       knowsAbout: [
-        "Google Ads", "Performance Max", "Search engine optimization", "Technical SEO", "International SEO", "Local SEO", "Google Business Profile",
-        "Conversion rate optimization", "Google Analytics 4", "Google Tag Manager", "Conversion tracking", "Microsoft Clarity", "Meta Ads", "Market research",
+        "GCC market entry", "Customer acquisition", "Arabic market localization", "Market research", "Google Ads", "Performance Max",
+        "Search engine optimization", "Technical SEO", "International SEO", "Local SEO", "Google Business Profile",
+        "Conversion rate optimization", "Google Analytics 4", "Google Tag Manager", "Conversion tracking", "Microsoft Clarity",
       ],
     },
   };
@@ -112,6 +114,28 @@ export default async function AboutPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Built across markets */}
+      <section aria-labelledby="across" className="section-y">
+        <div className="container-x">
+          <h2 id="across" className="h-section max-w-3xl">{a.across.h2}</h2>
+          <div className="mt-8 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="prose-body lead max-w-2xl">{a.across.body.map((t) => <p key={t}>{t}</p>)}</div>
+            <p className="self-start rounded-2xl border border-signal/40 bg-white p-6 text-xl font-semibold leading-snug shadow-card">{a.across.reinforce}</p>
+          </div>
+          <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {a.across.cards.map((c) => (
+              <li key={c.title} className="card flex flex-col p-6">
+                <p className="font-mono text-xs uppercase tracking-widest text-signal">{c.places}</p>
+                <h3 className="mt-3 text-lg font-semibold">{c.title}</h3>
+                <p className="mt-2 text-[0.95rem] text-muted">{c.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <EdgeComparison edge={dict.home.edge} id="edge-about" />
+
       {/* Approach */}
       <section aria-labelledby="approach" className="section-y">
         <div className="container-x">
@@ -138,20 +162,6 @@ export default async function AboutPage({ params }: Props) {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* International */}
-      <section aria-labelledby="international" className="section-y">
-        <div className="container-x grid gap-10 lg:grid-cols-[1fr_1.3fr]">
-          <div>
-            <h2 id="international" className="h-section">{a.international.h2}</h2>
-            <h3 className="mt-8 font-mono text-xs uppercase tracking-widest text-muted">{a.international.marketsLabel}</h3>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {a.international.markets.map((m) => <li key={m} className="rounded-full border border-ink-600/30 bg-white px-4 py-1.5 text-sm font-medium">{m}</li>)}
-            </ul>
-          </div>
-          <div className="prose-body lead max-w-2xl">{a.international.body.map((t) => <p key={t}>{t}</p>)}</div>
         </div>
       </section>
 
@@ -182,7 +192,7 @@ export default async function AboutPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Thailand focus */}
+      {/* Market focus: Thailand & Malaysia */}
       <section aria-labelledby="focus" className="section-y">
         <div className="container-x">
           <h2 id="focus" className="h-section max-w-3xl">{a.focus.h2}</h2>

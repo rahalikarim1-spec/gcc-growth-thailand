@@ -3,8 +3,6 @@ import { INDUSTRY_SLUGS, SERVICE_SLUGS } from "@/lib/routes";
 import type { Dictionary } from "@/content/types";
 import { HeaderClient, type HeaderData } from "./HeaderClient";
 
-// Nav shows the five core service pages from the brief; the sixth is reachable via the hub.
-const NAV_SERVICES = SERVICE_SLUGS.filter((s) => s !== "customer-journey-optimization");
 
 export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const data: HeaderData = {
@@ -14,7 +12,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     brandAria: dict.nav.home,
     services: {
       label: dict.nav.services,
-      items: NAV_SERVICES.map((s) => ({ href: localePath(locale, `/services/${s}`), label: dict.services[s].navLabel, desc: dict.services[s].cardSummary })),
+      items: SERVICE_SLUGS.map((s) => ({ href: localePath(locale, `/services/${s}`), label: dict.services[s].navLabel, desc: dict.services[s].cardSummary })),
       all: { href: localePath(locale, "/services"), label: dict.nav.allServices },
     },
     industries: {

@@ -1,4 +1,4 @@
-# Wadhah Belhassen — GCC & Arabic Market Growth (Thailand)
+# Wadhah Belhassen — GCC Market Entry & Growth Consultant
 
 Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · EN + TH · deployable to Vercel.
 
@@ -53,4 +53,13 @@ Pages now include `/about/` (ProfilePage + Person) and `/industries/restaurants/
 
 ## Content rules baked in
 
-No invented clients, logos, testimonials, awards, statistics, Bangkok office or Thailand client claims. Clinic pages carry a responsibility split and no outcome guarantees. `DataInsight` renders a "Verified data pending" state unless given a `value` + `source`.
+No invented clients, logos, testimonials, awards, statistics, local offices or Thailand/Malaysia client claims. Clinic pages carry a responsibility split and no outcome guarantees. `DataInsight` renders a "Verified data pending" state unless given a `value` + `source`.
+
+## Positioning & geography
+
+Brand: **Wadhah Belhassen — GCC Market Entry & Growth Consultant**, helping businesses in Thailand and Malaysia (umbrella: Southeast Asia) build measurable customer acquisition channels across GCC and Arabic-speaking markets.
+
+- Geography hierarchy in copy: Southeast Asia → Thailand & Malaysia → city examples (Bangkok, Kuala Lumpur, Phuket, Penang, Langkawi) only where they add meaning (restaurants/hotels/travel).
+- Market entry means **digital** market entry. Company formation, legal, tax, licensing and regulatory work are explicitly out of scope (stated on the market-entry page, services hub and footer).
+- Services (7): GCC Market Entry · Market Intelligence · Arabic Localization · Google Ads & Acquisition · Arabic SEO & AI Search Visibility · Landing Pages & CRO · Analytics, Tracking & Measurement. `customer-journey-optimization` was retired and 308-redirects to `arabic-localization` (see `next.config.ts`).
+- `SEA_MARKETS` in `src/lib/routes.ts` reserves `/thailand/` and `/malaysia/` for future market pages (not routed yet; add only with real search demand). Singapore/Indonesia can be added to the same list.

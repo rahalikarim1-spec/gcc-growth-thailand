@@ -12,20 +12,20 @@ export const industries: Dictionary["industries"] = {
   "hair-transplant": {
     navLabel: "Hair Transplant",
     cardTitle: "Hair Transplant Clinics",
-    cardSummary: "Acquire prospective patients searching for hair-restoration treatments in Thailand and Bangkok.",
+    cardSummary: "Acquire prospective patients searching for hair-restoration treatments in Thailand and Malaysia.",
     cardLink: "Hair Transplant GCC Growth",
     model: "Qualified consultation requests",
     metaTitle: "Hair Transplant Clinic Marketing for GCC Patients | Wadhah Belhassen",
     metaDescription:
-      "Help Thailand hair transplant clinics reach Arabic-speaking patients with Google Ads, Arabic landing pages and tracking — alongside your existing team.",
-    h1: "GCC Patient Acquisition for Hair Transplant Clinics in Thailand",
+      "Help hair transplant clinics in Thailand and Malaysia reach Arabic-speaking patients with Google Ads, Arabic landing pages and tracking, alongside your existing team.",
+    h1: "GCC Patient Acquisition for Hair Transplant Clinics in Thailand and Malaysia",
     intro:
-      "A GCC enquiry funnel built for hair-restoration clinics in Bangkok and across Thailand, designed to run alongside your clinic team, agency and website developers.",
+      "A GCC enquiry funnel built for hair-restoration clinics in Thailand and Malaysia, designed to run alongside your clinic team, agency and website developers.",
     problem: {
       title: "The market problem",
       body: [
         "Hair transplant is a considered decision. Prospects compare destinations, clinics and techniques for weeks, and many begin in Arabic, then move to WhatsApp to ask questions before any booking.",
-        "Clinics in Thailand compete for these searches with limited Arabic presence: pages are often translated English, tracking ends at a form submission, and the journey is not designed for a prospect considering travel abroad.",
+        "Clinics across Southeast Asia compete for these searches with limited Arabic presence: pages are often translated English, tracking ends at a form submission, and the journey is not designed for a prospect considering travel abroad.",
       ],
     },
     opportunity: {
@@ -51,6 +51,7 @@ export const industries: Dictionary["industries"] = {
       "gcc-market-entry": "Decide which GCC countries and treatment queries deserve budget first.",
       "google-ads-gcc": "Capture active treatment-research searches in Arabic and English.",
       "arabic-landing-pages": "Give prospects the information and trust cues they look for before contacting a clinic abroad.",
+      "arabic-localization": "Adapt messaging, trust signals and contact flow for how GCC patients evaluate a clinic abroad.",
       "conversion-tracking": "Track enquiries from form, WhatsApp and LINE through to consultations booked.",
     },
     responsibility: medicalResponsibility(["Medical advice and diagnosis", "Consultations and treatment planning", "Treatment and aftercare", "Patient communication and care"]),
@@ -64,10 +65,10 @@ export const industries: Dictionary["industries"] = {
     cardSummary: "Build GCC acquisition funnels for dental implants, veneers, cosmetic dentistry and Hollywood Smile treatments.",
     cardLink: "Dental Patient Acquisition",
     model: "Booked consultations, by treatment and country",
-    metaTitle: "Dental Clinic Marketing for GCC Patients in Thailand | Wadhah Belhassen",
+    metaTitle: "Dental Clinic Marketing for GCC Patients in Thailand & Malaysia | Wadhah Belhassen",
     metaDescription:
-      "Arabic SEO, Google Ads and landing pages that help Thailand dental clinics reach GCC patients for implants, veneers and cosmetic dentistry.",
-    h1: "GCC Patient Acquisition for Dental Clinics in Thailand",
+      "Arabic SEO, Google Ads and landing pages that help dental clinics in Thailand and Malaysia reach GCC patients for implants, veneers and cosmetic dentistry.",
+    h1: "GCC Patient Acquisition for Dental Clinics in Thailand and Malaysia",
     intro:
       "Search-led acquisition for implant, veneer and cosmetic dentistry clinics that want a measurable Arabic-speaking patient channel, added to the marketing you already run.",
     problem: {
@@ -99,6 +100,7 @@ export const industries: Dictionary["industries"] = {
     serviceNotes: {
       "arabic-seo": "Treatment pages that capture long-term Arabic demand for implants, veneers and cosmetic dentistry.",
       "google-ads-gcc": "Immediate visibility on high-intent treatment queries while organic rankings build.",
+      "arabic-localization": "Treatment messaging and journeys adapted for GCC patients planning dental care abroad.",
       "arabic-landing-pages": "Treatment-specific pages that fit how traveling patients evaluate a clinic.",
       "conversion-tracking": "Track which treatments and countries lead to real consultations.",
     },
@@ -115,8 +117,8 @@ export const industries: Dictionary["industries"] = {
     model: "Qualified patient enquiries and consultations",
     metaTitle: "Medical Tourism Marketing for GCC Patients | Wadhah Belhassen",
     metaDescription:
-      "Medical and aesthetic clinic marketing in Thailand for Arabic-speaking patients: market entry, Arabic SEO, Google Ads and measurable consultation funnels.",
-    h1: "Medical Tourism: GCC Patient Acquisition for Thailand Clinics and Providers",
+      "Medical and aesthetic clinic marketing in Thailand and Malaysia for Arabic-speaking patients: market entry, Arabic SEO, Google Ads and measurable consultation funnels.",
+    h1: "Medical Tourism: GCC Patient Acquisition for Clinics and Providers in Thailand and Malaysia",
     intro:
       "Dedicated acquisition journeys for medical, aesthetic and wellness providers and medical-tourism businesses that want to reach Arabic-speaking international patients, with their own teams fully in control.",
     problem: {
@@ -147,6 +149,8 @@ export const industries: Dictionary["industries"] = {
     servicesIntro: "A medical tourism channel typically combines:",
     serviceNotes: {
       "gcc-market-entry": "Choose specialties and countries based on demand rather than assumption.",
+      "market-intelligence": "Validate search demand, competitor visibility and consultation economics before budget is committed.",
+      "arabic-localization": "Arabic patient journeys and trust signals adapted by country, with your medical team approving every claim.",
       "arabic-seo": "Build durable Arabic visibility around specialties and destinations.",
       "google-ads-gcc": "Capture active research while content and trust build.",
       "conversion-tracking": "Connect marketing activity to consultations booked.",
@@ -160,40 +164,40 @@ export const industries: Dictionary["industries"] = {
     navLabel: "Restaurants",
     cardTitle: "Restaurants & F&B",
     cardSummary:
-      "Help restaurants in Bangkok reach Arabic-speaking and international customers through Google Search, Google Maps, Local SEO, multilingual landing experiences and measurable local acquisition.",
+      "Help restaurants in key destination cities across Thailand and Malaysia reach Arabic-speaking and international customers through Google Search, Google Maps, Local SEO, multilingual landing experiences and measurable local acquisition.",
     cardLink: "Restaurant Local Acquisition",
     model: "Directions, calls, reservations and physical visits",
-    metaTitle: "Restaurant Marketing in Bangkok: Google Maps, Local SEO & Ads | Wadhah Belhassen",
+    metaTitle: "Restaurant Marketing in Thailand & Malaysia: Google Maps, Local SEO & Ads | Wadhah Belhassen",
     metaDescription:
-      "Local SEO, Google Maps visibility, Google Ads and multilingual landing pages for Bangkok restaurants targeting Arabic-speaking tourists and international customers.",
-    h1: "Arabic & International Customer Acquisition for Bangkok Restaurants",
+      "Local SEO, Google Maps visibility, Google Ads and multilingual landing pages for restaurants in Bangkok, Kuala Lumpur and other destination cities targeting Arabic-speaking tourists and international customers.",
+    h1: "Arabic & International Customer Acquisition for Restaurants in Thailand and Malaysia",
     intro:
-      "Help your restaurant become easier to discover, choose and visit for Arabic-speaking tourists and international customers in Bangkok.",
+      "Help your restaurant become easier to discover, choose and visit for Arabic-speaking tourists and international customers in Bangkok, Kuala Lumpur and other destination cities.",
     problem: {
       title: "The market problem: being chosen in seconds",
       body: [
-        "A restaurant visit is decided quickly and locally. A visitor in Bangkok opens Google Maps, compares a handful of places by photos, ratings, distance and opening hours, and chooses. If your listing is incomplete, your menu is hard to read or your reviews don't reflect what you offer, you lose the visit before anyone sees your food.",
+        "A restaurant visit is decided quickly and locally. A visitor in Bangkok or Kuala Lumpur opens Google Maps, compares a handful of places by photos, ratings, distance and opening hours, and chooses. If your listing is incomplete, your menu is hard to read or your reviews don't reflect what you offer, you lose the visit before anyone sees your food.",
         "For international visitors there is an extra gap: menus, descriptions and reviews are often only in Thai or English, and the terms visitors actually search for — halal, family-friendly, premium dining, Arabic food — may not appear on the listing or website at all.",
       ],
     },
     opportunity: {
       title: "The opportunity: be easier to discover, choose and visit",
       body: [
-        "Arabic-speaking tourists are one audience among several international visitors in Bangkok. Whether they search in Arabic, English or both depends on the person and the query, so acquisition should follow real search demand rather than assume one language.",
+        "Arabic-speaking tourists are one audience among several international visitor groups in Thailand and Malaysia. Whether they search in Arabic, English or both depends on the person and the query, so acquisition should follow real search demand rather than assume one language.",
         "Restaurants that keep their Google Business Profile accurate, publish clear multilingual information and track directions, calls and reservations can see which searches and channels bring guests through the door. Rankings and visit volumes are never guaranteed.",
       ],
     },
     journeys: {
-      title: "Two ways guests find a Bangkok restaurant",
-      intro: "Restaurants win on local discovery. Two journeys matter: guests already in Bangkok, and GCC travelers planning before they arrive.",
+      title: "Two ways guests find a restaurant in Thailand or Malaysia",
+      intro: "Restaurants win on local discovery. Two journeys matter: guests already in the destination, and GCC travelers planning before they arrive.",
       flows: [
         {
-          label: "Tourist already in Bangkok",
-          steps: ["Tourist in Bangkok", "Google / Google Maps search", "Restaurant discovery", "Menu, reviews, location and trust", "Directions, call, LINE, WhatsApp or reservation", "Restaurant visit"],
+          label: "Tourist already in the destination",
+          steps: ["Tourist in a destination city", "Google / Google Maps search", "Restaurant discovery", "Menu, reviews, location and trust", "Directions, call, LINE, WhatsApp or reservation", "Restaurant visit"],
         },
         {
-          label: "GCC traveler planning a Bangkok trip",
-          steps: ["GCC traveler planning a Bangkok trip", "Searches for restaurants, halal food, Arabic food or premium dining", "Discovers the restaurant", "Saves the location or makes contact", "Visits during the Bangkok stay"],
+          label: "GCC traveler planning a trip to Thailand or Malaysia",
+          steps: ["GCC traveler planning a Thailand or Malaysia trip", "Searches for restaurants, halal food, Arabic food or premium dining", "Discovers the restaurant", "Saves the location or makes contact", "Visits during the stay"],
         },
       ],
       note: "Not every GCC visitor searches in Arabic. Campaigns and content use Arabic, English or both, depending on what search data shows for your cuisine, location and audience.",
@@ -203,7 +207,7 @@ export const industries: Dictionary["industries"] = {
       intro: "These surfaces decide whether a guest finds, trusts and reaches your restaurant.",
       items: [
         { title: "Google Business Profile", body: "Accurate hours, categories, photos, menu links, attributes and contact options, kept consistent. This is the foundation of Maps visibility." },
-        { title: "Google Maps & Local SEO", body: "Local keyword research and listing signals that help you appear for \"near me\" and area-based searches in Bangkok neighbourhoods." },
+        { title: "Google Maps & Local SEO", body: "Local keyword research and listing signals that help you appear for \"near me\" and area-based searches across city neighbourhoods." },
         { title: "Google Search in Arabic and English", body: "Demand research across both languages for cuisine, halal, family and premium-dining queries, supported by [Arabic SEO](service:arabic-seo)." },
         { title: "Multilingual landing pages", body: "Fast mobile pages with menu, location, hours and booking in the languages your guests use, built as [Arabic landing pages](service:arabic-landing-pages) where Arabic is relevant." },
         { title: "Google Ads", body: "Search and local campaigns around tourist peaks and events, with budgets you control. See [Google Ads for GCC](service:google-ads-gcc)." },
@@ -231,19 +235,19 @@ export const industries: Dictionary["industries"] = {
       "gcc-market-entry": "Check whether GCC visitors are a meaningful audience for your location and cuisine before investing.",
     },
     ctaTitle: "Make your restaurant easier to find, choose and visit",
-    ctaBody: "Request a market audit to see how international and Arabic-speaking guests currently find restaurants like yours in Bangkok.",
+    ctaBody: "Request a market audit to see how international and Arabic-speaking guests currently find restaurants like yours in Thailand and Malaysia.",
   },
 
   hotels: {
     navLabel: "Hotels",
     cardTitle: "Hotels & Hospitality",
-    cardSummary: "Increase visibility and direct-booking opportunities among GCC travelers visiting Thailand.",
+    cardSummary: "Increase visibility and direct-booking opportunities among GCC travelers visiting Thailand and Malaysia.",
     cardLink: "Hotel Direct Bookings",
     model: "Direct bookings and booking enquiries",
-    metaTitle: "Hotel & Hospitality Marketing for GCC Travelers in Thailand | Wadhah Belhassen",
+    metaTitle: "Hotel & Hospitality Marketing for GCC Travelers in Thailand & Malaysia | Wadhah Belhassen",
     metaDescription:
-      "Arabic search visibility and direct-booking growth for Thailand hotels and premium hospitality targeting GCC travelers.",
-    h1: "GCC Traveler Acquisition for Thailand Hotels and Premium Hospitality",
+      "Arabic search visibility and direct-booking growth for hotels and premium hospitality in Thailand and Malaysia targeting GCC travelers.",
+    h1: "GCC Traveler Acquisition for Hotels and Premium Hospitality in Thailand and Malaysia",
     intro:
       "Help hotels, resorts and premium hospitality venues be found by Arabic-speaking guests, and give them a reason to book directly — supported by your current revenue and marketing teams.",
     problem: {
@@ -257,14 +261,14 @@ export const industries: Dictionary["industries"] = {
       title: "The GCC opportunity",
       body: [
         "Properties with Arabic visibility, clear information on facilities and straightforward direct-booking paths can capture demand earlier in the research process.",
-        "Premium hospitality venues benefit from stronger Arabic local-search profiles that help travelers find them while in Thailand. For stand-alone dining businesses, see the dedicated [restaurants](industry:restaurants) approach.",
+        "Premium hospitality venues benefit from stronger Arabic local-search profiles that help travelers find them while in the destination. For stand-alone dining businesses, see the dedicated [restaurants](industry:restaurants) approach.",
       ],
     },
     funnel: {
       title: "Recommended acquisition funnel",
       intro: "From destination search to direct booking enquiry.",
       steps: [
-        { title: "Arabic destination and hotel search", body: "Targeting Bangkok, Phuket, Pattaya and other destination queries." },
+        { title: "Arabic destination and hotel search", body: "Targeting destination queries such as Bangkok, Phuket, Kuala Lumpur and Langkawi." },
         { title: "Arabic-language property content", body: "Pages covering facilities, family needs and policies guests look for." },
         { title: "Direct enquiry or booking", body: "Booking engine or enquiry path with a clear reason to book direct." },
         { title: "Revenue team follow-up", body: "Your reservations team handles requests and special arrangements." },
@@ -274,6 +278,7 @@ export const industries: Dictionary["industries"] = {
     servicesIntro: "Hotel and hospitality growth leans on:",
     serviceNotes: {
       "gcc-market-entry": "Understand which GCC source markets suit your property and season.",
+      "market-intelligence": "See which GCC source markets, seasons and room types show real demand before you invest.",
       "arabic-seo": "Arabic content and local search presence for hotels and premium venues.",
       "google-ads-gcc": "Reach GCC travelers while they compare destinations and stays.",
     },
@@ -284,19 +289,19 @@ export const industries: Dictionary["industries"] = {
   travel: {
     navLabel: "Travel",
     cardTitle: "Travel Agencies",
-    cardSummary: "Reach Arabic-speaking travelers before and during their Thailand journey.",
+    cardSummary: "Reach Arabic-speaking travelers before and during their trip to Thailand or Malaysia.",
     cardLink: "Travel Agency Growth",
     model: "Tour enquiries and bookings",
-    metaTitle: "Travel Agency Marketing for GCC Travelers to Thailand | Wadhah Belhassen",
+    metaTitle: "Travel Agency Marketing for GCC Travelers to Thailand & Malaysia | Wadhah Belhassen",
     metaDescription:
-      "Help Thailand tour operators and travel agencies reach Arabic-speaking travelers with Google Ads and Arabic SEO, from planning to in-destination.",
-    h1: "GCC Traveler Acquisition for Thailand Tour Operators and Travel Agencies",
+      "Help tour operators and travel agencies in Thailand and Malaysia reach Arabic-speaking travelers with Google Ads and Arabic SEO, from planning to in-destination.",
+    h1: "GCC Traveler Acquisition for Tour Operators and Travel Agencies in Thailand and Malaysia",
     intro:
-      "Reach Arabic-speaking travelers during planning and while they are already in Thailand, with campaigns that complement your existing sales and distribution.",
+      "Reach Arabic-speaking travelers during planning and while they are already in the destination, with campaigns that complement your existing sales and distribution.",
     problem: {
       title: "The market problem",
       body: [
-        "Tour operators and agencies in Thailand often rely on aggregators and English-language search. Arabic-speaking travelers searching for tours, transfers and experiences rarely find tailored offers.",
+        "Tour operators and agencies in Thailand and Malaysia often rely on aggregators and English-language search. Arabic-speaking travelers searching for tours, transfers and experiences rarely find tailored offers.",
         "Demand also has two moments — before arrival and in-destination — and each needs a different message and channel.",
       ],
     },
@@ -304,7 +309,7 @@ export const industries: Dictionary["industries"] = {
       title: "The GCC opportunity",
       body: [
         "Operators who publish Arabic-friendly itineraries and appear on Arabic searches can reach guests earlier, at lower dependency on marketplaces.",
-        "In-destination search and messaging-first booking suit Thailand's short-lead experiences, such as day tours and private transport.",
+        "In-destination search and messaging-first booking suit short-lead experiences such as day tours and private transport.",
       ],
     },
     funnel: {
@@ -312,7 +317,7 @@ export const industries: Dictionary["industries"] = {
       intro: "Two entry points, one measurable system.",
       steps: [
         { title: "Pre-trip search", body: "Arabic and English campaigns for itineraries, packages and family travel." },
-        { title: "In-destination search", body: "Mobile-first campaigns on tours, transfers and experiences while travelers are in Thailand." },
+        { title: "In-destination search", body: "Mobile-first campaigns on tours, transfers and experiences while travelers are in the destination." },
         { title: "Itinerary pages", body: "Clear pricing logic, inclusions and policies in Arabic." },
         { title: "Messaging-first booking", body: "WhatsApp or LINE enquiry paths for fast confirmation." },
         { title: "Measurement", body: "Bookings by country and moment of search." },
@@ -325,7 +330,7 @@ export const industries: Dictionary["industries"] = {
       "arabic-seo": "Build lasting visibility for Arabic destination and itinerary searches.",
     },
     ctaTitle: "Reach GCC travelers earlier",
-    ctaBody: "A market audit maps where Arabic-speaking travelers search for Thailand tours and what a campaign could look like.",
+    ctaBody: "A market audit maps where Arabic-speaking travelers search for Thailand and Malaysia tours and what a campaign could look like.",
   },
 
   "muay-thai": {
@@ -378,15 +383,15 @@ export const industries: Dictionary["industries"] = {
   "real-estate": {
     navLabel: "Real Estate",
     cardTitle: "Real Estate",
-    cardSummary: "Generate qualified Arabic-speaking enquiries for Thailand property and investment opportunities.",
+    cardSummary: "Generate qualified Arabic-speaking enquiries for Thailand and Malaysia property and investment opportunities.",
     cardLink: "Real Estate Enquiries",
     model: "Qualified property enquiries",
-    metaTitle: "Real Estate Marketing for GCC Buyers in Thailand | Wadhah Belhassen",
+    metaTitle: "Real Estate Marketing for GCC Buyers in Thailand & Malaysia | Wadhah Belhassen",
     metaDescription:
-      "Qualified Arabic-speaking property enquiries for Thailand developers and agents: market entry, localized landing pages, Google Ads and lead tracking.",
-    h1: "Qualified GCC Enquiries for Thailand Real Estate",
+      "Qualified Arabic-speaking property enquiries for developers and agents in Thailand and Malaysia: market entry, localized landing pages, Google Ads and lead tracking.",
+    h1: "Qualified GCC Enquiries for Real Estate in Thailand and Malaysia",
     intro:
-      "A structured acquisition path for developers and agents who want qualified Arabic-speaking enquiries for Thailand property, supported by your current sales team and website.",
+      "A structured acquisition path for developers and agents who want qualified Arabic-speaking enquiries for Thailand and Malaysia property, supported by your current sales team and website.",
     problem: {
       title: "The market problem",
       body: [
@@ -397,7 +402,7 @@ export const industries: Dictionary["industries"] = {
     opportunity: {
       title: "The GCC opportunity",
       body: [
-        "Arabic-speaking buyers researching investment or lifestyle property in Thailand can be reached with country-specific messaging and a qualification step that respects your sales team's time.",
+        "Arabic-speaking buyers researching investment or lifestyle property in Thailand or Malaysia can be reached with country-specific messaging and a qualification step that respects your sales team's time.",
         "A properly measured channel shows which projects, countries and messages create serious conversations.",
       ],
     },
@@ -415,6 +420,7 @@ export const industries: Dictionary["industries"] = {
     servicesIntro: "A real estate acquisition path uses:",
     serviceNotes: {
       "gcc-market-entry": "Select the buyer markets that suit your inventory and pricing.",
+      "market-intelligence": "Check buyer demand, competing projects and likely acquisition economics by GCC country.",
       "arabic-landing-pages": "Project pages that address foreign buyers' questions in Arabic.",
       "google-ads-gcc": "Reach property and investment searchers in target countries.",
       "conversion-tracking": "Link ad spend to qualified leads and sales-team outcomes.",

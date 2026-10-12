@@ -6,7 +6,11 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   async redirects() {
-    return [{ source: "/", destination: "/en/", permanent: false }];
+    return [
+      { source: "/", destination: "/en/", permanent: false },
+      // Retired service page: its customer-journey scope now lives in Arabic Localization & Customer Experience.
+      { source: "/:lang(en|th)/services/customer-journey-optimization", destination: "/:lang/services/arabic-localization/", permanent: true },
+    ];
   },
   async headers() {
     return [

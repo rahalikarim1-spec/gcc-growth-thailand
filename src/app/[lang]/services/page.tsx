@@ -7,6 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { ServiceCard } from "@/components/ServiceCard";
+import { PilotSection } from "@/components/PilotSection";
 import { RelatedIndustries } from "@/components/RelatedIndustries";
 import { CTASection } from "@/components/CTASection";
 import { JsonLd } from "@/components/JsonLd";
@@ -40,9 +41,13 @@ export default async function ServicesHub({ params }: Props) {
                 <ServiceCard index={i} href={localePath(lang, `/services/${s}`)} title={dict.services[s].cardTitle} summary={dict.services[s].cardSummary} cta={dict.ui.explore} />
               </li>
             ))}
+            <li className="flex items-center rounded-2xl border border-dashed border-gold/50 bg-[#fbf3df]/60 p-6 text-sm text-muted sm:p-7 md:col-span-2 lg:col-span-2">
+              <p>{d.boundary}</p>
+            </li>
           </ul>
         </div>
       </section>
+      <PilotSection pilot={d.pilot} />
       <RelatedIndustries locale={lang} dict={dict} slugs={["hair-transplant", "dental-clinics", "medical-tourism"]} title={dict.ui.industries} intro={dict.industriesHub.intro} />
       <CTASection locale={lang} title={dict.home.final.h2} body={dict.home.final.body} cta={dict.cta.audit} />
     </>

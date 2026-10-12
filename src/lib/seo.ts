@@ -34,7 +34,7 @@ export function buildMetadata({ locale, path, title, description, noindex }: Pag
       siteName: "Wadhah Belhassen",
       locale: localeMeta[locale].ogLocale,
       alternateLocale: locales.filter((l) => l !== locale).map((l) => localeMeta[l].ogLocale),
-      images: [{ url: absoluteUrl(`${localePath(locale)}opengraph-image/`), width: 1200, height: 630, alt: "Wadhah Belhassen — GCC & Arabic Market Growth" }],
+      images: [{ url: absoluteUrl(`${localePath(locale)}opengraph-image/`), width: 1200, height: 630, alt: "Wadhah Belhassen — GCC Market Entry & Growth Consultant" }],
     },
     twitter: {
       card: "summary_large_image",

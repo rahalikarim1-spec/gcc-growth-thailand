@@ -10,6 +10,7 @@ import { Hero } from "@/components/Hero";
 import { RichText } from "@/components/RichText";
 import { TeamDiagram } from "@/components/TeamDiagram";
 import { IndustryCard } from "@/components/IndustryCard";
+import { EdgeComparison } from "@/components/EdgeComparison";
 import { MedicalFeature } from "@/components/MedicalFeature";
 import { ProcessStep } from "@/components/ProcessStep";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -36,22 +37,23 @@ export default async function HomePage({ params }: Props) {
     "@type": "Person",
     "@id": absoluteUrl("/#person"),
     name: person.name,
-    jobTitle: "International Digital Growth Consultant",
+    jobTitle: "GCC Market Entry & Growth Consultant",
     description: dict.brand.statement,
     url: person.mainSite,
     sameAs: [person.mainSite, person.linkedin],
-    knowsAbout: ["Google Ads", "SEO", "Arabic SEO", "International SEO", "Conversion rate optimization", "Google Analytics 4", "Google Tag Manager", "Conversion tracking", "Market research"],
+    knowsAbout: ["GCC market entry", "Customer acquisition", "Arabic market localization", "Market research", "Google Ads", "SEO", "Arabic SEO", "International SEO", "Conversion rate optimization", "Google Analytics 4", "Google Tag Manager", "Conversion tracking"],
   };
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": absoluteUrl("/#service"),
-    name: "Wadhah Belhassen — GCC & Arabic Market Growth",
+    name: "Wadhah Belhassen — GCC Market Entry & Growth Consultant",
     url: absoluteUrl(localePath(lang)),
     description: h.metaDescription,
     founder: { "@id": absoluteUrl("/#person") },
     areaServed: markets.map((name) => ({ "@type": "Country", name })),
-    serviceType: ["GCC market entry strategy", "Google Ads management", "Arabic SEO", "Conversion rate optimization", "Conversion tracking"],
+    serviceType: ["GCC market entry strategy", "Market intelligence", "Arabic localization", "Google Ads", "Arabic SEO", "Conversion rate optimization", "Analytics and conversion tracking"],
+    audience: { "@type": "BusinessAudience", name: "Businesses in Thailand, Malaysia and Southeast Asia entering GCC and Arabic-speaking markets" },
     knowsLanguage: ["en", "th", "ar"],
   };
   const siteSchema = {
@@ -93,6 +95,8 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      <EdgeComparison edge={h.edge} />
+
       {/* Who I help */}
       <section aria-labelledby="who-title" className="section-y border-t border-line bg-paper-2/60">
         <div className="container-x">
@@ -117,6 +121,7 @@ export default async function HomePage({ params }: Props) {
           <ol className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {h.how.steps.map((s, i) => <ProcessStep key={s.title} n={i + 1} title={s.title} body={s.body} />)}
           </ol>
+          <p className="rich mt-10 max-w-3xl text-muted"><RichText text={h.how.note} locale={lang} /></p>
         </div>
       </section>
 
@@ -138,6 +143,18 @@ export default async function HomePage({ params }: Props) {
                 <ServiceCard index={i} href={localePath(lang, `/services/${s}`)} title={dict.services[s].cardTitle} summary={dict.services[s].cardSummary} cta={dict.ui.explore} />
               </li>
             ))}
+            <li className="md:col-span-2 lg:col-span-2">
+              <Link href={localePath(lang, "/services") + "#pilot"} className="on-dark group flex h-full flex-col justify-between rounded-2xl border border-signal-bright/40 bg-ink-900 p-6 text-white shadow-lift transition-transform hover:-translate-y-0.5 sm:p-7">
+                <span>
+                  <span className="font-mono text-xs uppercase tracking-widest text-signal-bright">90 days</span>
+                  <span className="mt-3 block text-xl font-semibold">{h.services.pilotTitle}</span>
+                  <span className="mt-2 block text-slate-300">{h.services.pilotBody}</span>
+                </span>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-signal-bright">
+                  {h.services.pilotCta}<ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1 rtl:rotate-180" />
+                </span>
+              </Link>
+            </li>
           </ul>
           <p className="mt-8 max-w-3xl text-muted">
             <RichText locale={lang} text={h.services.sectorNote} />

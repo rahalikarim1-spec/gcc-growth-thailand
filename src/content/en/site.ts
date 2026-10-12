@@ -7,9 +7,9 @@ export const site: Pick<
   locale: "en",
   brand: {
     name: "Wadhah Belhassen",
-    role: "GCC & Arabic Market Growth Specialist",
+    role: "GCC Market Entry & Growth Consultant",
     statement:
-      "Helping Thailand and Southeast Asian businesses build measurable customer acquisition channels across GCC and Arabic-speaking markets.",
+      "Helping businesses in Thailand and Malaysia build measurable customer acquisition channels across GCC and Arabic-speaking markets.",
   },
   nav: {
     services: "Services",
@@ -67,7 +67,7 @@ export const site: Pick<
     linkedin: "LinkedIn",
     rights: "All rights reserved.",
     disclaimer:
-      "Marketing services only. Clinical advice, diagnosis and treatment remain the responsibility of licensed medical providers. No results are guaranteed.",
+      "Digital market-entry and growth consulting only. Not legal, tax, licensing or regulatory advice. Clinical advice, diagnosis and treatment remain the responsibility of licensed medical providers. No results are guaranteed.",
     contact: "Contact",
     industriesTitle: "Industries",
   },
@@ -77,22 +77,41 @@ export const site: Pick<
     audit: "Request a Market Audit",
   },
   servicesHub: {
-    metaTitle: "GCC & Arabic Customer Acquisition Services | Wadhah Belhassen",
+    metaTitle: "GCC Market Entry & Customer Acquisition Services | Wadhah Belhassen",
     metaDescription:
-      "Google Ads, Arabic SEO, localized landing pages and conversion tracking for Thailand businesses that want GCC customers — added alongside your current team.",
-    h1: "GCC & Arabic Customer Acquisition Services",
+      "Seven connected services for businesses in Thailand and Malaysia entering GCC markets: market intelligence, Arabic localization, Google Ads, SEO, landing pages and measurement.",
+    h1: "GCC Market Entry & Customer Acquisition Services",
     intro:
-      "Expand into GCC markets without rebuilding your entire marketing operation. Each service below plugs into the website, team and campaigns you already run.",
+      "Enter GCC markets without rebuilding your marketing operation. Seven connected services take you from market opportunity to measured customer acquisition, alongside the team you already have.",
     collabNote:
-      "Every engagement is built around your existing agency, developers and in-house team — not around replacing them.",
+      "Every engagement is built around your existing agency, developers and in-house team, not around replacing them.",
+    boundary:
+      "Market entry here means digital market entry: intelligence, go-to-market, localization, acquisition, conversion and measurement. It does not include company incorporation, legal, tax, licensing or regulatory work; where those are needed, specialist local partners may be involved separately.",
+    pilot: {
+      id: "pilot",
+      h2: "90-Day GCC Market Opportunity & Acquisition Pilot",
+      intro:
+        "A structured way to start. The pilot validates the opportunity first, then builds and measures the acquisition channel, so you can decide on evidence whether to scale. Scope is agreed per business; no fixed package or price is published here.",
+      stages: [
+        { title: "Market Opportunity", body: "Is there a GCC opportunity for your offer, and where?" },
+        { title: "Demand & Competitor Intelligence", body: "Search demand, competitor visibility and likely acquisition economics." },
+        { title: "GCC Customer Journey", body: "How GCC customers research, compare, trust and make contact." },
+        { title: "Localization", body: "Arabic messaging and experience adapted by country, not translated." },
+        { title: "Acquisition Infrastructure", body: "Landing pages, tracking, account structure and contact flows." },
+        { title: "Campaign Launch", body: "Controlled launch by country and intent, with conservative budgets." },
+        { title: "Qualified Lead Measurement", body: "Qualified leads, consultations or bookings measured, not clicks." },
+        { title: "Optimization", body: "Fix the weakest link, then decide what to scale, change or stop." },
+      ],
+      note: "A pilot is a structured test, not a guarantee of results.",
+    },
   },
   industriesHub: {
-    metaTitle: "Industries: GCC Customer Acquisition for Thailand Businesses | Wadhah Belhassen",
+    metaTitle: "Industries: GCC Customer Acquisition for Thailand & Malaysia Businesses | Wadhah Belhassen",
     metaDescription:
-      "Hair transplant, dental, medical tourism, restaurants, hotels, travel, Muay Thai and real estate: how Thailand businesses can add GCC and Arabic-speaking customers.",
-    h1: "Built for Thailand Businesses Ready to Reach GCC Customers",
+      "Hair transplant, dental, medical tourism, restaurants, hotels, travel, Muay Thai and real estate: how businesses in Thailand and Malaysia can add GCC and Arabic-speaking customers.",
+    h1: "Built for Businesses in Thailand and Malaysia Ready to Reach GCC Customers",
     intro:
-      "Medical tourism is the strongest current opportunity, but the same GCC acquisition logic applies across high-value Thailand businesses with an international audience.",
+      "Medical tourism is the strongest current opportunity, but the same GCC market-entry logic applies across high-value Southeast Asian businesses with an international audience. Each vertical has a different business model, so each gets a different acquisition model.",
   },
   contact: {
     metaTitle: "Request a GCC Market Audit | Wadhah Belhassen",
@@ -154,14 +173,14 @@ export const site: Pick<
   },
   insights: {
     metaTitle: "GCC Market Research | Wadhah Belhassen",
-    metaDescription: "Research framework for GCC and Arabic-speaking demand toward Thailand businesses. Verified data will be published here.",
+    metaDescription: "Research framework for GCC and Arabic-speaking demand toward businesses in Thailand and Malaysia. Verified data will be published here.",
     h1: "GCC Market Research",
     intro:
-      "Proprietary research on GCC demand for Thailand services is being prepared. Nothing is published here until each figure is verified against a named source.",
+      "Proprietary research on GCC demand for Thailand and Malaysia services is being prepared. Nothing is published here until each figure is verified against a named source.",
     status: "In preparation",
     areasTitle: "What the research will cover",
     areas: [
-      { title: "Tourism flows", body: "Travel patterns from GCC source markets to Thailand, by market and season." },
+      { title: "Tourism flows", body: "Travel patterns from GCC source markets to Thailand and Malaysia, by market and season." },
       { title: "Google search demand", body: "Arabic and English search volumes for treatments, destinations and services." },
       { title: "Keyword competition & CPC signals", body: "Where auction pressure is high, and where demand is under-served." },
       { title: "Competitor visibility", body: "Who currently appears for Arabic queries, and what their journey looks like." },

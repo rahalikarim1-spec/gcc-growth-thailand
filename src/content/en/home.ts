@@ -1,19 +1,19 @@
 import type { Dictionary } from "../types";
 
 export const home: Dictionary["home"] = {
-  metaTitle: "GCC & Arabic Customer Acquisition for Thailand Businesses | Wadhah Belhassen",
+  metaTitle: "GCC Market Entry & Customer Acquisition for Thailand & Malaysia | Wadhah Belhassen",
   metaDescription:
-    "Add GCC and Arabic-speaking customers to your Thailand business with Google Ads, Arabic SEO, localized landing pages and tracking — alongside your existing team, not instead of it.",
+    "GCC market entry and growth consulting for businesses in Thailand and Malaysia: market intelligence, Arabic localization, Google Ads, SEO, landing pages and measurement, built alongside your existing team.",
   hero: {
-    eyebrow: "GCC & Arabic Market Growth · Thailand & Southeast Asia",
+    eyebrow: "GCC Market Entry & Growth · Southeast Asia",
     h1: "Turn GCC & Arabic Markets Into Your Next Growth Channel",
     lead:
-      "I help businesses in Thailand and Southeast Asia acquire high-value customers from Saudi Arabia, UAE, Kuwait, Qatar, Oman and the wider Arabic-speaking market.",
+      "I help businesses in Thailand and Malaysia enter, acquire customers and grow across Saudi Arabia, UAE, Kuwait, Qatar, Oman and the wider Arabic-speaking market.",
     description:
-      "Through market intelligence, Google Ads, Arabic SEO, conversion-focused landing pages and end-to-end tracking, I build a dedicated GCC customer acquisition channel around the digital infrastructure you already have.",
+      "Through market intelligence, Arabic localization, Google Ads, SEO, conversion-focused landing pages and end-to-end measurement, I build a dedicated GCC growth channel around the team and digital infrastructure you already have.",
     trustLead: "Keep Your Team. Add a New Market.",
     trust:
-      "Keep your marketing team. Keep your developers. Keep your existing campaigns. I work alongside them to add the GCC & Arabic growth layer.",
+      "Keep your marketing team. Keep your developers. Keep your existing campaigns. I work alongside them as your dedicated GCC market-entry and growth layer.",
     industriesLabel: "Built for",
     industries: [
       { name: "Hair Transplant" },
@@ -28,14 +28,14 @@ export const home: Dictionary["home"] = {
     ],
   },
   visual: {
-    label: "GCC acquisition system: from a Thailand business to measurable revenue",
-    origin: "Bangkok",
-    originSub: "Your business",
-    steps: ["Thailand business", "GCC market", "Customer acquisition", "Measurable revenue"],
-    caption: "Acquisition signals from five GCC markets, routed to the business you already run.",
+    label: "GCC growth system: demand from five GCC markets routed through a market-entry and growth layer to businesses in Thailand and Malaysia",
+    steps: ["Southeast Asian business", "GCC market entry", "Customer acquisition", "Measurable growth"],
+    caption: "Demand signals from five GCC markets, routed through a growth layer to businesses in Thailand and Malaysia.",
     coordsNote: "Schematic · positions indicative",
-    hub: "GCC acquisition layer",
+    hub: "GCC growth layer",
+    region: "Southeast Asia",
     nodes: { "saudi-arabia": "Saudi Arabia", uae: "UAE", kuwait: "Kuwait", qatar: "Qatar", oman: "Oman" },
+    destinations: { thailand: "Thailand", malaysia: "Malaysia" },
   },
   keepTeam: {
     id: "keep-your-team",
@@ -50,18 +50,18 @@ export const home: Dictionary["home"] = {
       "Your agency can continue managing your existing markets.",
       "Your internal team keeps its processes.",
     ],
-    role: "My role is to identify, build and optimize the GCC & Arabic acquisition opportunity.",
+    role: "My role is to identify, build and optimize the GCC market-entry and acquisition opportunity.",
     diagram: {
       existingTitle: "Your existing business",
       existing: ["Website", "Developers", "Marketing Team", "Current Campaigns"],
-      layerTitle: "Wadhah's GCC growth layer",
+      layerTitle: "Wadhah's GCC market-entry & growth layer",
       layer: [
         "Market Intelligence",
-        "Arabic Search Demand",
+        "Arabic Localization",
         "Localized Landing Pages",
         "Google Ads",
         "Arabic SEO",
-        "Tracking & Analytics",
+        "Tracking & Measurement",
       ],
       resultTitle: "New market",
       result: ["Qualified customers", "Measurable growth"],
@@ -69,15 +69,30 @@ export const home: Dictionary["home"] = {
       equals: "equals",
     },
   },
+  edge: {
+    h2: "Market-Entry Thinking. Hands-On Growth Execution.",
+    intro: "Businesses usually meet the GCC through one of two kinds of provider. Each covers half of the problem.",
+    cols: [
+      { label: "Digital marketing agency", line: "Runs campaigns.", body: "Executes well inside a market you already understand. GCC market context usually has to come from somewhere else." },
+      { label: "Market-entry consultant", line: "Produces research and recommendations.", body: "Clear on strategy and opportunity. Someone still has to build and measure the acquisition channel." },
+      {
+        label: "Wadhah Belhassen",
+        line: "Combines both.",
+        items: ["Market intelligence", "Cultural understanding", "Localization", "Customer acquisition", "Conversion infrastructure", "Measurement"],
+        highlight: true,
+      },
+    ],
+    closing: "I don't just tell you whether the GCC is an opportunity. I help build and measure the acquisition channel, with your team, and without promising results nobody can guarantee.",
+  },
   who: {
-    h2: "Built for Thailand Businesses Ready to Reach GCC Customers",
+    h2: "Built for Businesses in Thailand and Malaysia Ready to Reach GCC Customers",
     intro:
-      "Medical tourism is the strongest current opportunity, but the same acquisition logic applies to many high-value Thailand businesses with an international audience.",
+      "Medical tourism is the strongest current opportunity, but the same market-entry logic applies to many high-value Southeast Asian businesses with an international audience. Each vertical has its own acquisition model.",
     cards: [
       {
         slug: "hair-transplant",
         title: "Hair Transplant Clinics",
-        body: "Acquire prospective patients searching for hair-restoration treatments in Thailand and Bangkok.",
+        body: "Acquire prospective patients searching for hair-restoration treatments in Thailand and Malaysia.",
         link: "Hair Transplant GCC Growth",
       },
       {
@@ -95,20 +110,20 @@ export const home: Dictionary["home"] = {
       {
         slug: "restaurants",
         title: "Restaurants & F&B",
-        body: "Help restaurants in Bangkok reach Arabic-speaking and international customers through Google Search, Google Maps, Local SEO, multilingual landing experiences and measurable local acquisition.",
+        body: "Help restaurants in key destination cities across Thailand and Malaysia reach Arabic-speaking and international customers through Google Search, Google Maps, Local SEO, multilingual landing experiences and measurable local acquisition.",
         link: "Restaurant Local Acquisition",
         hot: true,
       },
       {
         slug: "hotels",
         title: "Hotels & Hospitality",
-        body: "Increase visibility and direct-booking opportunities among GCC travelers visiting Thailand.",
+        body: "Increase visibility and direct-booking opportunities among GCC travelers visiting Thailand and Malaysia.",
         link: "Hotel Direct Bookings",
       },
       {
         slug: "travel",
         title: "Travel Agencies",
-        body: "Reach Arabic-speaking travelers before and during their Thailand journey.",
+        body: "Reach Arabic-speaking travelers before and during their trip to Thailand or Malaysia.",
         link: "Travel Agency Growth",
       },
       {
@@ -120,7 +135,7 @@ export const home: Dictionary["home"] = {
       {
         slug: "real-estate",
         title: "Real Estate",
-        body: "Generate qualified Arabic-speaking enquiries for Thailand property and investment opportunities.",
+        body: "Generate qualified Arabic-speaking enquiries for Thailand and Malaysia property and investment opportunities.",
         link: "Real Estate Enquiries",
       },
       {
@@ -135,7 +150,7 @@ export const home: Dictionary["home"] = {
     eyebrow: "Featured · Medical tourism",
     h2: "From GCC Search to Patient Consultation",
     body:
-      "I help hair transplant, dental, cosmetic and medical clinics build dedicated acquisition journeys for Arabic-speaking patients while their existing medical, marketing and development teams remain fully in control.",
+      "I help hair transplant, dental, cosmetic and medical clinics in Thailand and Malaysia build dedicated acquisition journeys for Arabic-speaking patients while their existing medical, marketing and development teams remain fully in control.",
     funnel: [
       "Saudi / GCC Search",
       "Arabic & English Search Campaign",
@@ -157,41 +172,30 @@ export const home: Dictionary["home"] = {
     id: "how-it-works",
     h2: "From Market Opportunity to Measurable Growth",
     steps: [
-      {
-        title: "Market Intelligence",
-        body: "Analyze GCC demand, competitors, search behavior, keywords and country-level opportunities.",
-      },
-      {
-        title: "Acquisition Strategy",
-        body: "Prioritize Saudi Arabia, UAE, Kuwait, Qatar and Oman using Arabic and English search intent.",
-      },
-      {
-        title: "Localized Landing Experience",
-        body: "Build conversion-focused customer journeys adapted to GCC audiences rather than simply translating existing pages.",
-      },
-      { title: "Google Ads & SEO", body: "Capture high-intent demand through paid and organic search." },
-      {
-        title: "Conversion Infrastructure",
-        body: "GA4, GTM, forms, WhatsApp/LINE integration and attribution where appropriate.",
-      },
-      {
-        title: "Optimization",
-        body: "Measure qualified leads, consultations, bookings, customers and revenue — not just clicks.",
-      },
+      { title: "Market Intelligence", body: "Validate GCC demand, competitors, search behavior and country-level opportunity before budget is committed." },
+      { title: "Market-Entry Strategy", body: "Prioritize Saudi Arabia, UAE, Kuwait, Qatar and Oman and define the go-to-market approach from Arabic and English search intent." },
+      { title: "Arabic Localization", body: "Adapt messaging, trust signals and customer journeys to GCC audiences rather than simply translating existing pages." },
+      { title: "Customer Acquisition", body: "Capture high-intent demand through Google Ads and organic search." },
+      { title: "Conversion & Measurement", body: "GA4, GTM, forms, WhatsApp/LINE and attribution, plus CRM or offline feedback where appropriate." },
+      { title: "Optimization", body: "Measure qualified leads, consultations, bookings and customers, not just clicks." },
     ],
+    note: "Prefer a structured way to start? See the [90-Day GCC Market Opportunity & Acquisition Pilot](page:services).",
   },
   services: {
-    h2: "Services that plug into your current setup",
-    intro: "Six focused services. Use one, or combine them into a complete GCC acquisition channel.",
+    h2: "Seven connected services, built around your current setup",
+    intro: "Use one, or combine them into a complete GCC market-entry and acquisition channel.",
     all: "View all services",
+    pilotTitle: "90-Day GCC Market Opportunity & Acquisition Pilot",
+    pilotBody: "A structured way to validate the opportunity, build the acquisition infrastructure and measure the first qualified leads.",
+    pilotCta: "See the pilot",
     sectorNote: "Looking for your sector? See [hair transplant](industry:hair-transplant), [dental](industry:dental-clinics), [hotels](industry:hotels) and [travel](industry:travel) pages.",
   },
   about: {
     id: "about",
     h2: "Meet Wadhah Belhassen",
     body: [
-      "Wadhah Belhassen is an international Digital Growth Consultant specializing in customer acquisition, Google Ads, SEO, CRO, analytics and conversion tracking.",
-      "After working across European, North African and international markets, he is building a specialized growth proposition for Thailand and Southeast Asian businesses seeking to reach GCC and Arabic-speaking customers.",
+      "Wadhah Belhassen is a GCC Market Entry & Growth Consultant. He combines market intelligence, Arabic localization and hands-on acquisition: Google Ads, SEO, CRO and conversion tracking.",
+      "Shaped by living and working across the Gulf, North Africa and Europe, he now helps businesses in Thailand and Malaysia understand, reach and convert GCC and Arabic-speaking customers.",
     ],
     proof: [
       { value: "€2M+", label: "advertising spend managed" },
@@ -200,20 +204,20 @@ export const home: Dictionary["home"] = {
     ],
     expertiseTitle: "Expertise",
     expertise: [
+      "Market Intelligence",
+      "Arabic Localization",
       "Google Ads",
       "SEO",
       "CRO",
-      "GA4",
-      "GTM",
+      "GA4 & GTM",
       "Landing Pages",
-      "Market Research",
-      "International Acquisition",
+      "Customer Acquisition",
     ],
     mainSite: "Visit wadhah.digital",
     linkedin: "Connect on LinkedIn",
     more: "Read the full profile",
     honesty:
-      "Experience gained across European, North African and international markets; the Thailand and GCC proposition is a new, focused offering.",
+      "Experience gained across Gulf, North African, European and international markets; the Thailand and Malaysia proposition is a new, focused offering.",
   },
   data: {
     h2: "Growth Decisions Backed by Market Data",

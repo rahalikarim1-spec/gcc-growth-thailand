@@ -20,6 +20,8 @@ export interface ServicePage {
   problem: TextBlock;
   whatIDo: { title: string; items: Step[] };
   collaboration: { title: string; intro: string; yourTeam: string[]; wadhah: string[] };
+  /** Optional scope-of-service statement (used by market entry to state what it is not). */
+  boundary?: TextBlock;
   process: { title: string; steps: Step[] };
   industriesIntro: string;
   marketsIntro: string;
@@ -96,9 +98,11 @@ export interface Dictionary {
       trustLead: string; trust: string; industriesLabel: string; industries: { name: string; hot?: boolean }[];
     };
     visual: {
-      label: string; origin: string; originSub: string;
+      label: string;
       steps: string[]; caption: string; coordsNote: string;
-      hub: string; nodes: Record<"saudi-arabia" | "uae" | "kuwait" | "qatar" | "oman", string>;
+      hub: string; region: string;
+      nodes: Record<"saudi-arabia" | "uae" | "kuwait" | "qatar" | "oman", string>;
+      destinations: { thailand: string; malaysia: string };
     };
     keepTeam: {
       id: string; h2: string; intro: string[]; keeps: string[]; role: string;
@@ -115,8 +119,13 @@ export interface Dictionary {
       wadhahTitle: string; wadhahItems: string[]; clinicTitle: string; clinicItems: string[];
       disclaimer: string; link: string;
     };
-    how: { id: string; h2: string; steps: Step[] };
-    services: { h2: string; intro: string; all: string; sectorNote: string };
+    edge: {
+      h2: string; intro: string;
+      cols: { label: string; line: string; body?: string; items?: string[]; highlight?: boolean }[];
+      closing: string;
+    };
+    how: { id: string; h2: string; steps: Step[]; note: string };
+    services: { h2: string; intro: string; all: string; sectorNote: string; pilotTitle: string; pilotBody: string; pilotCta: string };
     about: {
       id: string; h2: string; body: string[]; proof: { value: string; label: string }[];
       expertiseTitle: string; expertise: string[]; mainSite: string; linkedin: string; honesty: string; more: string;
@@ -125,7 +134,10 @@ export interface Dictionary {
     final: { h2: string; body: string };
   };
   about: AboutPage;
-  servicesHub: { metaTitle: string; metaDescription: string; h1: string; intro: string; collabNote: string };
+  servicesHub: {
+    metaTitle: string; metaDescription: string; h1: string; intro: string; collabNote: string; boundary: string;
+    pilot: { id: string; h2: string; intro: string; stages: Step[]; note: string };
+  };
   industriesHub: { metaTitle: string; metaDescription: string; h1: string; intro: string };
   services: Record<ServiceSlug, ServicePage>;
   industries: Record<IndustrySlug, IndustryPage>;
@@ -161,7 +173,10 @@ export interface AboutPage {
   proofNote: string;
   approach: { h2: string; body: string[]; chain: string[]; closing: string };
   expertise: { h2: string; intro: string; groups: { title: string; body: string; items: string[] }[] };
-  international: { h2: string; body: string[]; marketsLabel: string; markets: string[] };
+  across: {
+    h2: string; body: string[]; reinforce: string;
+    cards: { title: string; places: string; body: string }[];
+  };
   experience: {
     h2: string; intro: string;
     items: { name: string; place: string; type: string; body: string; relevance?: string }[];
