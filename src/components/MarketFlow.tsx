@@ -89,7 +89,7 @@ export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
 
         {/* Southeast Asia bracket */}
         <path d="M60 462 V470 H320 V462" stroke="rgb(255 255 255 / .3)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-        <text x="190" y="488" textAnchor="middle" fontSize="11" fill="#cbd5e1" fontFamily="ui-monospace, monospace" letterSpacing={/[\u0E00-\u0E7F]/.test(v.region) ? 0 : 1.5}>{v.region.toUpperCase()}</text>
+        <text x="190" y="488" textAnchor="middle" fontSize="11" fill="#cbd5e1" fontFamily="ui-monospace, monospace" letterSpacing={/[\u0E00-\u0E7F\u0600-\u06FF]/.test(v.region) ? 0 : 1.5}>{v.region.toUpperCase()}</text>
       </svg>
 
       <ol className="mt-1 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-4 lg:grid-cols-2">

@@ -151,7 +151,7 @@ export default async function HomePage({ params }: Props) {
             <li className="md:col-span-2 lg:col-span-1">
               <Link href={localePath(lang, "/services") + "#pilot"} className="on-dark group flex h-full flex-col justify-between rounded-2xl border border-signal-bright/40 bg-ink-900 p-6 text-white shadow-lift transition-transform hover:-translate-y-0.5 sm:p-7">
                 <span>
-                  <span className="font-mono text-xs uppercase tracking-widest text-signal-bright">90 days</span>
+                  <span className="font-mono text-xs uppercase tracking-widest text-signal-bright">{h.services.pilotTag}</span>
                   <span className="mt-3 block text-xl font-semibold">{h.services.pilotTitle}</span>
                   <span className="mt-2 block text-slate-300">{h.services.pilotBody}</span>
                 </span>

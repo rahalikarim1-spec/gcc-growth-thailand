@@ -133,7 +133,7 @@ export function AuditForm({ locale, f, channels }: { locale: string; f: Dictiona
 
       {/* Honeypot — hidden from people and assistive tech. */}
       <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
-        <label>Leave empty<input name="hp" tabIndex={-1} autoComplete="off" /></label>
+        <label aria-hidden="true">Leave empty<input name="hp" tabIndex={-1} autoComplete="off" /></label>
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

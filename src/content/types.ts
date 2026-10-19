@@ -126,7 +126,7 @@ export interface Dictionary {
       closing: string;
     };
     how: { id: string; h2: string; steps: Step[]; note: string };
-    services: { h2: string; intro: string; all: string; sectorNote: string; pilotTitle: string; pilotBody: string; pilotCta: string };
+    services: { h2: string; intro: string; all: string; sectorNote: string; pilotTag: string; pilotTitle: string; pilotBody: string; pilotCta: string };
     about: {
       id: string; h2: string; body: string[]; proof: { value: string; label: string }[];
       expertiseTitle: string; expertise: string[]; mainSite: string; linkedin: string; honesty: string; more: string;

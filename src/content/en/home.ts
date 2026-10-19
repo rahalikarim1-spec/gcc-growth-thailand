@@ -203,6 +203,7 @@ export const home: Dictionary["home"] = {
     h2: "Eight connected services, built around your current setup",
     intro: "Use one, or combine them into a complete GCC market-entry and acquisition channel.",
     all: "View all services",
+    pilotTag: "90 days",
     pilotTitle: "90-Day GCC Market Opportunity & Acquisition Pilot",
     pilotBody: "A structured way to validate the opportunity, build the acquisition infrastructure and measure the first qualified leads.",
     pilotCta: "See the pilot",
