@@ -1,10 +1,11 @@
-export const locales = ["en", "th"] as const;
+export const locales = ["en", "th", "ar"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "en";
 
-export const localeMeta: Record<Locale, { htmlLang: string; ogLocale: string; label: string; name: string }> = {
-  en: { htmlLang: "en", ogLocale: "en_US", label: "EN", name: "English" },
-  th: { htmlLang: "th", ogLocale: "th_TH", label: "ไทย", name: "ไทย" },
+export const localeMeta: Record<Locale, { htmlLang: string; ogLocale: string; label: string; name: string; dir: "ltr" | "rtl" }> = {
+  en: { htmlLang: "en", ogLocale: "en_US", label: "EN", name: "English", dir: "ltr" },
+  th: { htmlLang: "th", ogLocale: "th_TH", label: "ไทย", name: "ไทย", dir: "ltr" },
+  ar: { htmlLang: "ar", ogLocale: "ar_AR", label: "العربية", name: "العربية", dir: "rtl" },
 };
 
 export function isLocale(value: string): value is Locale {

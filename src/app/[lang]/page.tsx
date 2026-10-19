@@ -30,7 +30,7 @@ export default async function HomePage({ params }: Props) {
   const { lang } = await params;
   const dict = getDictionary(lang);
   const h = dict.home;
-  const markets = ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Oman"];
+  const markets = ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Bahrain", "Oman"];
 
   const personSchema = {
     "@context": "https://schema.org",
@@ -121,7 +121,12 @@ export default async function HomePage({ params }: Props) {
           <ol className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {h.how.steps.map((s, i) => <ProcessStep key={s.title} n={i + 1} title={s.title} body={s.body} />)}
           </ol>
-          <p className="rich mt-10 max-w-3xl text-muted"><RichText text={h.how.note} locale={lang} /></p>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+            <Link href={localePath(lang, "/how-it-works")} className="btn btn-outline shrink-0">
+              {dict.nav.howItWorks}<ArrowRight aria-hidden className="arrow size-4" />
+            </Link>
+            <p className="rich max-w-3xl text-muted"><RichText text={h.how.note} locale={lang} /></p>
+          </div>
         </div>
       </section>
 
@@ -143,7 +148,7 @@ export default async function HomePage({ params }: Props) {
                 <ServiceCard index={i} href={localePath(lang, `/services/${s}`)} title={dict.services[s].cardTitle} summary={dict.services[s].cardSummary} cta={dict.ui.explore} />
               </li>
             ))}
-            <li className="md:col-span-2 lg:col-span-2">
+            <li className="md:col-span-2 lg:col-span-1">
               <Link href={localePath(lang, "/services") + "#pilot"} className="on-dark group flex h-full flex-col justify-between rounded-2xl border border-signal-bright/40 bg-ink-900 p-6 text-white shadow-lift transition-transform hover:-translate-y-0.5 sm:p-7">
                 <span>
                   <span className="font-mono text-xs uppercase tracking-widest text-signal-bright">90 days</span>

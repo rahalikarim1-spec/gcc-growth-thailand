@@ -2,13 +2,14 @@ import Link from "next/link";
 import { localePath, locales, localeMeta, type Locale } from "@/lib/i18n";
 import { INDUSTRY_SLUGS, MARKETS } from "@/lib/routes";
 import { HotBadge } from "./HotBadge";
-import { person } from "@/lib/site";
+import { getContactLinks } from "@/lib/site";
 import type { Dictionary } from "@/content/types";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const nav = [
     { href: localePath(locale, "/services"), label: dict.nav.services },
     { href: localePath(locale, "/industries"), label: dict.nav.industries },
+    { href: localePath(locale, "/how-it-works"), label: dict.nav.howItWorks },
     { href: localePath(locale, "/about"), label: dict.nav.about },
     { href: localePath(locale, "/insights"), label: dict.nav.insights },
     { href: localePath(locale, "/contact"), label: dict.nav.contact },
@@ -49,8 +50,13 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div>
           <h2 className={col}>{dict.footer.externalTitle}</h2>
           <ul className="mt-4 grid gap-2.5 text-sm">
-            <li><a className={link} href={person.mainSite} target="_blank" rel="noopener noreferrer">{dict.footer.website}<span className="sr-only"> {dict.ui.opensNewTab}</span></a></li>
-            <li><a className={link} href={person.linkedin} target="_blank" rel="noopener noreferrer">{dict.footer.linkedin}<span className="sr-only"> {dict.ui.opensNewTab}</span></a></li>
+            {getContactLinks().map((c) => (
+              <li key={c.key}>
+                <a className={link} href={c.href} {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                  {dict.footer[c.key]}{c.external && <span className="sr-only"> {dict.ui.opensNewTab}</span>}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div>

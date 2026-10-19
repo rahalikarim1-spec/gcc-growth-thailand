@@ -21,7 +21,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       all: { href: localePath(locale, "/industries"), label: dict.nav.allIndustries },
     },
     links: [
-      { href: localePath(locale) + `#${dict.home.how.id}`, label: dict.nav.howItWorks },
+      { href: localePath(locale, "/how-it-works"), label: dict.nav.howItWorks },
       { href: localePath(locale, "/insights"), label: dict.nav.insights },
       { href: localePath(locale, "/about"), label: dict.nav.about },
     ],

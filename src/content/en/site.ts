@@ -41,6 +41,7 @@ export const site: Pick<
     },
     relatedServicesForIndustry: { title: "Services that fit this industry" },
     explore: "Explore",
+    whatHappens: "What happens",
     hot: "HOT",
     optimiseFor: "What this channel optimises for",
     faq: "Frequently asked questions",
@@ -56,6 +57,7 @@ export const site: Pick<
     uae: "United Arab Emirates",
     kuwait: "Kuwait",
     qatar: "Qatar",
+    bahrain: "Bahrain",
     oman: "Oman",
   },
   footer: {
@@ -65,6 +67,8 @@ export const site: Pick<
     languagesTitle: "Languages",
     website: "Wadhah.digital",
     linkedin: "LinkedIn",
+    email: "Email",
+    whatsapp: "WhatsApp",
     rights: "All rights reserved.",
     disclaimer:
       "Digital market-entry and growth consulting only. Not legal, tax, licensing or regulatory advice. Clinical advice, diagnosis and treatment remain the responsibility of licensed medical providers. No results are guaranteed.",
@@ -79,10 +83,10 @@ export const site: Pick<
   servicesHub: {
     metaTitle: "GCC Market Entry & Customer Acquisition Services | Wadhah Belhassen",
     metaDescription:
-      "Seven connected services for businesses in Thailand and Malaysia entering GCC markets: market intelligence, Arabic localization, Google Ads, SEO, landing pages and measurement.",
+      "Eight connected services for businesses in Thailand and Malaysia entering GCC markets: market intelligence, Arabic localization, Google Ads, SEO, landing pages and measurement.",
     h1: "GCC Market Entry & Customer Acquisition Services",
     intro:
-      "Enter GCC markets without rebuilding your marketing operation. Seven connected services take you from market opportunity to measured customer acquisition, alongside the team you already have.",
+      "Enter GCC markets without rebuilding your marketing operation. Eight connected services take you from market opportunity to measured customer acquisition, alongside the team you already have.",
     collabNote:
       "Every engagement is built around your existing agency, developers and in-house team, not around replacing them.",
     boundary:
@@ -157,10 +161,13 @@ export const site: Pick<
       "Hotel / hospitality",
       "Travel agency / tour operator",
       "Muay Thai camp / fitness",
+      "Education / language school",
+      "Professional services",
+      "B2B / exporter",
       "Real estate",
       "Other",
     ],
-    markets: ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Oman", "Not sure yet"],
+    markets: ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Bahrain", "Oman", "Not sure yet"],
     situations: [
       "No marketing team yet",
       "In-house marketing team",

@@ -3,7 +3,6 @@
 import { useId, useRef, useState } from "react";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 import { validateAudit, type AuditPayload } from "@/lib/audit";
-import { person } from "@/lib/site";
 import type { Dictionary } from "@/content/types";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -11,7 +10,9 @@ type Errors = Partial<Record<keyof AuditPayload, true>>;
 
 const field = "mt-1.5 w-full rounded-lg border border-ink-600/30 bg-white px-3.5 py-3 text-base text-ink-900 placeholder:text-slate-400 focus:border-signal focus:outline-none focus:ring-2 focus:ring-signal/30 aria-[invalid=true]:border-red-600";
 
-export function AuditForm({ locale, f }: { locale: string; f: Dictionary["form"] }) {
+export interface FallbackChannel { label: string; href: string; external: boolean }
+
+export function AuditForm({ locale, f, channels }: { locale: string; f: Dictionary["form"]; channels: FallbackChannel[] }) {
   const uid = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
@@ -64,7 +65,12 @@ export function AuditForm({ locale, f }: { locale: string; f: Dictionary["form"]
             <p className="font-semibold">{f.errorTitle}</p>
             <p className="text-sm">
               {f.errorBody}{" "}
-              <a className="underline" href={person.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              {channels.map((c, i) => (
+                <span key={c.href}>
+                  {i > 0 && " · "}
+                  <a className="underline" href={c.href} {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{c.label}</a>
+                </span>
+              ))}
             </p>
           </div>
         </div>
@@ -85,7 +91,7 @@ export function AuditForm({ locale, f }: { locale: string; f: Dictionary["form"]
 
       <div>
         <label htmlFor={id("website")} className="font-medium">{f.website} <span className="font-normal text-muted">({f.optional})</span></label>
-        <input id={id("website")} name="website" type="url" inputMode="url" autoComplete="url" placeholder="https://" className={field} />
+        <input id={id("website")} name="website" type="url" inputMode="url" autoComplete="url" placeholder="https://" className={`${field} field-ltr`} />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
@@ -116,7 +122,7 @@ export function AuditForm({ locale, f }: { locale: string; f: Dictionary["form"]
 
       <div>
         <label htmlFor={id("contact")} className="font-medium">{f.contactField}</label>
-        <input id={id("contact")} name="contact" autoComplete="email" required placeholder={f.contactHint} className={field} {...err("contact")} />
+        <input id={id("contact")} name="contact" autoComplete="email" required placeholder={f.contactHint} className={`${field} field-ltr`} {...err("contact")} />
         {err_("contact", f.invalidContact)}
       </div>
 

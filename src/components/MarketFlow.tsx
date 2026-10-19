@@ -3,21 +3,22 @@ import type { Dictionary } from "@/content/types";
 type NodeId = keyof Dictionary["home"]["visual"]["nodes"];
 
 /**
- * Schematic: real lat/lon of the five GCC capitals are projected (equirectangular, 24px/deg) into the top cluster,
+ * Schematic: real lat/lon of the six GCC capitals are projected (equirectangular, 24px/deg) into the top cluster,
  * then routed down through a "GCC growth layer" hub to two Southeast Asian destinations (Thailand, Malaysia) under a
  * "Southeast Asia" bracket. The Southeast Asia leg is schematic (axis break), not to scale.
  * Vertical layout keeps SVG text legible at phone width.
  */
 const ORIGIN = { lon: 46, lat: 30 };
 const SCALE = 24;
-const gulf: { id: NodeId; lat: number; lon: number; lx: number; anchor: "start" | "middle" | "end" }[] = [
+const gulf: { id: NodeId; lat: number; lon: number; lx: number; anchor: "start" | "middle" | "end"; dx?: number; dy?: number }[] = [
   { id: "kuwait", lat: 29.38, lon: 47.99, lx: 0, anchor: "middle" },
   { id: "saudi-arabia", lat: 24.71, lon: 46.68, lx: -34, anchor: "start" },
+  { id: "bahrain", lat: 26.07, lon: 50.55, lx: 0, anchor: "middle", dx: -14, dy: -20 }, // nudged: schematic, would otherwise sit on Qatar
   { id: "qatar", lat: 25.29, lon: 51.53, lx: 0, anchor: "middle" },
   { id: "uae", lat: 25.2, lon: 55.27, lx: 0, anchor: "middle" },
   { id: "oman", lat: 23.59, lon: 58.54, lx: 14, anchor: "end" },
 ];
-const pos = (lat: number, lon: number) => ({ x: (lon - ORIGIN.lon) * SCALE + 36, y: (ORIGIN.lat - lat) * SCALE + 62 });
+const pos = (lat: number, lon: number, dx = 0, dy = 0) => ({ x: (lon - ORIGIN.lon) * SCALE + 36 + dx, y: (ORIGIN.lat - lat) * SCALE + 62 + dy });
 const fmt = (lat: number, lon: number) => `${lat.toFixed(1)}°N ${lon.toFixed(1)}°E`;
 
 const HUB = { x: 190, y: 296 };
@@ -43,7 +44,7 @@ export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
         </g>
 
         {gulf.map((n) => {
-          const p = pos(n.lat, n.lon);
+          const p = pos(n.lat, n.lon, n.dx, n.dy);
           const d = `M${p.x} ${p.y} C ${p.x} ${p.y + 90}, ${HUB.x} ${HUB.y - 110}, ${HUB.x} ${HUB.y - 26}`;
           return (
             <g key={n.id}>
@@ -63,13 +64,12 @@ export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
         })}
 
         {gulf.map((n, i) => {
-          const p = pos(n.lat, n.lon);
+          const p = pos(n.lat, n.lon, n.dx, n.dy);
           return (
             <g key={n.id}>
               <circle className="pulse-ring" cx={p.x} cy={p.y} r="5" fill="#e4bb6a" style={{ animationDelay: `${i * 0.45}s` }} />
               <circle cx={p.x} cy={p.y} r="5" fill="#e4bb6a" />
-              <text x={p.x + n.lx} y={p.y - 26} textAnchor={n.anchor} fontSize="14" fontWeight="600" fill="#fff">{v.nodes[n.id]}</text>
-              <text x={p.x + n.lx} y={p.y - 13} textAnchor={n.anchor} fontSize="10" fill="#a8b3c5" fontFamily="ui-monospace, monospace">{fmt(n.lat, n.lon)}</text>
+              <text x={p.x + n.lx} y={p.y - 15} textAnchor={n.anchor} fontSize="14" fontWeight="600" fill="#fff">{v.nodes[n.id]}</text>
             </g>
           );
         })}

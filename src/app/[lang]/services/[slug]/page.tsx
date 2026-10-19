@@ -52,7 +52,7 @@ export default async function ServicePage({ params }: Props) {
     url,
     inLanguage: lang,
     provider: { "@type": "Person", "@id": absoluteUrl("/#person"), name: person.name, url: person.mainSite },
-    areaServed: ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Oman"].map((name) => ({ "@type": "Country", name })),
+    areaServed: ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Bahrain", "Oman"].map((name) => ({ "@type": "Country", name })),
     audience: { "@type": "BusinessAudience", name: "Businesses in Thailand, Malaysia and Southeast Asia targeting GCC and Arabic-speaking customers" },
   };
 

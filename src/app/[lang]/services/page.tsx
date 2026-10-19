@@ -41,7 +41,7 @@ export default async function ServicesHub({ params }: Props) {
                 <ServiceCard index={i} href={localePath(lang, `/services/${s}`)} title={dict.services[s].cardTitle} summary={dict.services[s].cardSummary} cta={dict.ui.explore} />
               </li>
             ))}
-            <li className="flex items-center rounded-2xl border border-dashed border-gold/50 bg-[#fbf3df]/60 p-6 text-sm text-muted sm:p-7 md:col-span-2 lg:col-span-2">
+            <li className="flex items-center rounded-2xl border border-dashed border-gold/50 bg-[#fbf3df]/60 p-6 text-sm text-muted sm:p-7 md:col-span-2 lg:col-span-1">
               <p>{d.boundary}</p>
             </li>
           </ul>

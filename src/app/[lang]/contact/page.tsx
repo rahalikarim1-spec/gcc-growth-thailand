@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getDictionary } from "@/content";
 import { localePath, type Locale } from "@/lib/i18n";
-import { absoluteUrl, person } from "@/lib/site";
+import { absoluteUrl, getContactLinks } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
@@ -20,6 +20,7 @@ export default async function ContactPage({ params }: Props) {
   const { lang } = await params;
   const dict = getDictionary(lang);
   const c = dict.contact;
+  const channels = getContactLinks().map((l) => ({ label: dict.footer[l.key], href: l.href, external: l.external }));
   const crumbs = [
     { name: dict.ui.home, href: localePath(lang) },
     { name: dict.nav.contact, href: localePath(lang, "/contact") },
@@ -30,7 +31,7 @@ export default async function ContactPage({ params }: Props) {
       <PageHero crumbs={crumbs} crumbsLabel={dict.ui.breadcrumbs} h1={c.h1} lead={c.intro} />
       <section className="section-y">
         <div className="container-x grid gap-12 lg:grid-cols-[1.4fr_1fr]">
-          <AuditForm locale={lang} f={dict.form} />
+          <AuditForm locale={lang} f={dict.form} channels={channels} />
           <aside className="grid content-start gap-8">
             <div>
               <h2 className="text-xl font-semibold">{c.expectTitle}</h2>
@@ -46,9 +47,15 @@ export default async function ContactPage({ params }: Props) {
             <div className="border-t border-line pt-6">
               <h2 className="text-xl font-semibold">{c.altTitle}</h2>
               <p className="mt-2 text-muted">{c.altBody}</p>
-              <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn-outline mt-4">
-                LinkedIn<span className="sr-only"> {dict.ui.opensNewTab}</span>
-              </a>
+              <ul className="mt-4 flex flex-wrap gap-3">
+                {channels.map((ch) => (
+                  <li key={ch.href}>
+                    <a href={ch.href} className="btn btn-outline" {...(ch.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                      {ch.label}{ch.external && <span className="sr-only"> {dict.ui.opensNewTab}</span>}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>

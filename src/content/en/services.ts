@@ -21,14 +21,14 @@ export const services: Dictionary["services"] = {
       title: "The problem: entering the Gulf by guesswork",
       body: [
         "Many Southeast Asian businesses know GCC customers exist but not where to begin. The usual shortcut — translate the website and boost some posts — spends budget without knowing which country, service or search intent is worth pursuing.",
-        "Saudi Arabia, the UAE, Kuwait, Qatar and Oman are not one market. Search behavior, competition and the way people make contact differ by country, and so does what each audience needs to see before they enquire.",
+        "Saudi Arabia, the UAE, Kuwait, Qatar, Bahrain and Oman are not one market. Search behavior, competition and the way people make contact differ by country, and so does what each audience needs to see before they enquire.",
       ],
     },
     whatIDo: {
       title: "What I do",
       items: [
         { title: "Market opportunity analysis", body: "Whether, where and for which offer a GCC opportunity exists, backed by [market intelligence](service:market-intelligence)." },
-        { title: "Customer demand and country prioritization", body: "A reasoned ranking of Saudi Arabia, UAE, Kuwait, Qatar and Oman for your specific offer." },
+        { title: "Customer demand and country prioritization", body: "A reasoned ranking of Saudi Arabia, UAE, Kuwait, Qatar, Bahrain and Oman for your specific offer." },
         { title: "Competitor intelligence", body: "Who is already visible for the queries that matter, and where the gaps are." },
         { title: "GCC customer journey", body: "How GCC customers research, compare, trust and prefer to make contact, including WhatsApp-first behavior." },
         { title: "Go-to-market planning", body: "Which mix of [Google Ads](service:google-ads-gcc), [Arabic SEO](service:arabic-seo) and [localized landing pages](service:arabic-landing-pages) to start with, and how success will be measured." },
@@ -55,7 +55,7 @@ export const services: Dictionary["services"] = {
       title: "Process",
       steps: [
         { title: "Discovery", body: "Your services, margins, capacity, current marketing and what you've already tried." },
-        { title: "Market intelligence", body: "Demand, competition and search behavior across the five GCC markets." },
+        { title: "Market intelligence", body: "Demand, competition and search behavior across the six GCC markets." },
         { title: "Entry roadmap", body: "Priority countries, offers, channels, budget logic and measurement plan." },
         { title: "Handover and execution", body: "Briefs for your team, or hands-on execution through the other services." },
       ],
@@ -182,7 +182,7 @@ export const services: Dictionary["services"] = {
     },
     industriesIntro:
       "Localization matters most where trust and reassurance drive the decision: [medical tourism](industry:medical-tourism), [hair transplant](industry:hair-transplant) and [dental](industry:dental-clinics) clinics, [hotels](industry:hotels) and [restaurants](industry:restaurants).",
-    marketsIntro: "Saudi Arabia, the UAE, Kuwait, Qatar and Oman are adapted separately rather than as one generic Arabic version.",
+    marketsIntro: "Saudi Arabia, the UAE, Kuwait, Qatar, Bahrain and Oman are adapted separately rather than as one generic Arabic version.",
     faqs: [
       { q: "Is this just translation?", a: "No. Translation converts words. Localization adapts the offer, tone, trust signals, journey and contact flow for the audience." },
       { q: "Do you write the Arabic copy yourself?", a: "I direct and review it with native-language writers or your team, so the Arabic is natural and credible rather than literal." },
@@ -196,10 +196,10 @@ export const services: Dictionary["services"] = {
   "google-ads-gcc": {
     navLabel: "Google Ads GCC",
     cardTitle: "Google Ads & Customer Acquisition",
-    cardSummary: "Capture high-intent Arabic and English search demand from Saudi Arabia, UAE, Kuwait, Qatar and Oman and turn it into qualified customers.",
+    cardSummary: "Capture high-intent Arabic and English search demand from Saudi Arabia, UAE, Kuwait, Qatar, Bahrain and Oman and turn it into qualified customers.",
     metaTitle: "Google Ads & Customer Acquisition for GCC Markets | Wadhah Belhassen",
     metaDescription:
-      "Google Ads campaigns for Arabic and English search in Saudi Arabia, UAE, Kuwait, Qatar and Oman, built for businesses in Thailand and Malaysia and measured on qualified enquiries.",
+      "Google Ads campaigns for Arabic and English search in Saudi Arabia, UAE, Kuwait, Qatar, Bahrain and Oman, built for businesses in Thailand and Malaysia and measured on qualified enquiries.",
     h1: "Google Ads & Customer Acquisition for GCC Markets",
     valueProp:
       "Search campaigns built around how Gulf customers actually look for your services, measured on qualified enquiries rather than clicks.",
@@ -241,7 +241,7 @@ export const services: Dictionary["services"] = {
     },
     industriesIntro:
       "Search demand is clearest where people actively look for a service in Thailand or Malaysia: [hair transplant](industry:hair-transplant), [dental](industry:dental-clinics) and [medical tourism](industry:medical-tourism) clinics, [restaurants](industry:restaurants), [travel agencies](industry:travel) and [Muay Thai camps](industry:muay-thai).",
-    marketsIntro: "Budgets are split by country and intent, so Saudi Arabia, UAE, Kuwait, Qatar and Oman are each judged on their own results.",
+    marketsIntro: "Budgets are split by country and intent, so Saudi Arabia, UAE, Kuwait, Qatar, Bahrain and Oman are each judged on their own results.",
     faqs: [
       { q: "Will you take over our existing Google Ads account?", a: "Not unless you want that. Typically I build a separate GCC structure, and your agency continues to manage your current campaigns." },
       { q: "What budget do we need?", a: "It depends on the markets and competition for your service. The market audit gives a realistic range before you commit; I don't recommend launching without enough budget to learn." },
@@ -310,6 +310,65 @@ export const services: Dictionary["services"] = {
     ],
     ctaTitle: "See how visible you are in Arabic search",
     ctaBody: "A market audit shows the Arabic search demand around your services and how you currently compare.",
+  },
+
+  "local-seo": {
+    navLabel: "Local SEO & Maps",
+    cardTitle: "Local SEO & Google Maps",
+    cardSummary: "Google Business Profile, Maps visibility and local search signals, so Arabic-speaking and international customers can find, trust and reach your location.",
+    metaTitle: "Local SEO & Google Maps for Arabic-Speaking and International Visitors | Wadhah Belhassen",
+    metaDescription:
+      "Google Business Profile, Google Maps and local SEO for restaurants, hotels, clinics and venues in Thailand and Malaysia reaching Arabic-speaking and international visitors.",
+    h1: "Local SEO & Google Maps",
+    valueProp:
+      "Be easier to find, choose and reach for visitors who search on Google Maps in Arabic and English, before and during their trip.",
+    problem: {
+      title: "The problem: chosen or skipped in seconds",
+      body: [
+        "A visitor opens Google Maps, compares a few places by photos, ratings, distance and opening hours, and decides. An incomplete profile, an unreadable menu or reviews that do not reflect what you offer lose the visit before anyone talks to you.",
+        "For Arabic-speaking and international visitors there is an extra gap: listings, menus and reviews are often only in Thai, Malay or English, and the terms visitors actually search for may not appear on the profile or website at all.",
+      ],
+    },
+    whatIDo: {
+      title: "What I do",
+      items: [
+        { title: "Google Business Profile optimization", body: "Accurate categories, hours, photos, attributes, menu or service links and contact options, kept consistent everywhere." },
+        { title: "Local keyword research", body: "Area-based and \"near me\" demand in Arabic and English, checked in Google Keyword Planner and live results." },
+        { title: "Google Maps visibility", body: "Review of competing listings around your location and the signals that separate those that appear from those that do not." },
+        { title: "Review strategy", body: "A process for collecting genuine feedback and replying consistently. No fake reviews and no review gating." },
+        { title: "Local measurement", body: "Calls, direction requests, reservation and chat clicks tracked where technically possible through [analytics and tracking](service:conversion-tracking)." },
+      ],
+    },
+    collaboration: {
+      title: "How this works with your existing team",
+      intro: "Local SEO is operational: someone on site has to keep hours, photos and replies current. I set the structure and your team keeps it alive.",
+      yourTeam: ["Your team keeps ownership of the profile and answers reviews.", "Your developers keep the website and its local pages.", "Your agency keeps its current local work in your existing markets."],
+      wadhah: [
+        "Profile audit and optimization plan.",
+        "Arabic and English local keyword strategy.",
+        "Review process and local reporting.",
+      ],
+    },
+    process: {
+      title: "Process",
+      steps: [
+        { title: "Local audit", body: "Profile, listings, reviews and competing locations around you." },
+        { title: "Demand research", body: "Arabic and English local search demand for your category." },
+        { title: "Profile and page foundation", body: "Close profile gaps and align the website's [Arabic SEO](service:arabic-seo) and local pages." },
+        { title: "Measure and refine", body: "Track calls, directions and reservations, and review trends monthly." },
+      ],
+    },
+    industriesIntro:
+      "Local visibility decides the visit for [restaurants](industry:restaurants) and [hotels](industry:hotels), and supports [dental](industry:dental-clinics) and [medical tourism](industry:medical-tourism) clinics, [education providers](industry:education) and [professional services](industry:professional-services) with a physical location.",
+    marketsIntro: "Local signals are worked per city and per audience, including the Arabic-speaking visitors who plan before they arrive.",
+    faqs: [
+      { q: "Can you guarantee a top Google Maps ranking?", a: "No. Rankings depend on proximity, relevance, reputation and competition. I improve what can be improved and measure what happens, without promising positions." },
+      { q: "Do we need a physical location?", a: "Google Business Profile is for businesses with a physical location or a defined service area that follow Google's guidelines. Online-only businesses are not eligible." },
+      { q: "Can you write reviews for us?", a: "No. Reviews must come from genuine customers. I help you ask for feedback properly and respond well." },
+      { q: "Do we need Arabic on our profile?", a: "Not necessarily. It depends on what Arabic-speaking visitors search for and on Google's guidelines for each field. The local audit tells you where Arabic adds value." },
+    ],
+    ctaTitle: "See how visitors find you on Google Maps",
+    ctaBody: "A market audit reviews your profile, nearby competitors and the Arabic and English local searches around your location.",
   },
 
   "arabic-landing-pages": {

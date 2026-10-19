@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Sans_Thai } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic, IBM_Plex_Sans_Thai } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/content";
 import { isLocale, localeMeta, locales } from "@/lib/i18n";
@@ -11,6 +11,8 @@ import "../globals.css";
 const plex = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], display: "swap", variable: "--font-plex" });
 // Thai glyphs are served via unicode-range only when Thai text is on the page.
 const plexThai = IBM_Plex_Sans_Thai({ subsets: ["thai", "latin"], weight: ["400", "500", "600"], display: "swap", variable: "--font-plex-thai", preload: false });
+// Arabic glyphs load only when Arabic text is on the page.
+const plexArabic = IBM_Plex_Sans_Arabic({ subsets: ["arabic", "latin"], weight: ["400", "500", "600"], display: "swap", variable: "--font-plex-arabic", preload: false });
 
 export const dynamicParams = false;
 
@@ -33,7 +35,7 @@ export default async function LangLayout({ children, params }: { children: React
   const dict = getDictionary(lang);
 
   return (
-    <html lang={localeMeta[lang].htmlLang} className={`${plex.variable} ${plexThai.variable}`}>
+    <html lang={localeMeta[lang].htmlLang} dir={localeMeta[lang].dir} className={`${plex.variable} ${plexThai.variable} ${plexArabic.variable}`}>
       <body>
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-ink-900">
           {dict.nav.skip}

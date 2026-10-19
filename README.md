@@ -38,16 +38,26 @@ src/
 - **Static generation**: every page is prerendered via `generateStaticParams`; unknown locales/slugs 404.
 - **Trailing slashes** are on (`trailingSlash: true`), matching the specified URLs and canonicals.
 
-### Adding Arabic (`/ar/`)
+### Arabic (`/ar/`) and RTL
 
-1. `lib/i18n.ts`: add `"ar"` to `locales` and `localeMeta` (`htmlLang: "ar"`, `ogLocale: "ar_AR"`, `dir: "rtl"`).
-2. Create `content/ar/` (copy `content/en/`, translate), register it in `content/index.ts`.
-3. In `[lang]/layout.tsx` set `<html dir>` from the locale and add an Arabic font (e.g. `IBM_Plex_Sans_Arabic`).
-4. Hreflang, sitemap alternates and the language switcher pick the new locale up automatically. Components already use logical properties (`ps-*`, `border-s-*`) in the places that matter; audit remaining `left/right`, `translate-x` and arrow icons.
+Arabic is a first-class locale: `locales = ["en","th","ar"]`, `localeMeta.ar.dir = "rtl"`, content in `content/ar/` (same `Dictionary` shape as EN/TH). `[lang]/layout.tsx` sets `<html lang dir>` and loads IBM Plex Sans Arabic (unicode-range, only fetched when Arabic text is present).
+
+- Components use logical properties (`ms-/me-/ps-/pe-/start-/end-/border-s`). Directional icons are mirrored globally under `html[dir="rtl"]` in `globals.css`; the hero image and its scrims are mirrored so the face stays toward the copy.
+- Latin-only inputs (URL, email, phone) use `.field-ltr`. The GCC map SVG is pinned `direction: ltr`.
+- Arabic typography rules (`html[lang="ar"]`): taller line-height, no letter-spacing (it breaks Arabic joining), no mono/uppercase eyebrow.
+- Hreflang (`en`, `th`, `ar`, `x-default`), sitemap alternates and the language switcher pick locales up automatically. The Open Graph image is Latin-only (no Arabic font is bundled for it).
+
+### Contact channels and the audit form
+
+No contact details are invented. `lib/site.ts` (`contactChannels`, `getContactLinks()`) shows email and WhatsApp only when `NEXT_PUBLIC_CONTACT_EMAIL` / `NEXT_PUBLIC_CONTACT_WHATSAPP` are set; the footer, contact page and form error panel pick them up. The form posts to `/api/audit`, which forwards to `AUDIT_WEBHOOK_URL`. If that is unset, production returns 503 and the form shows an error with the available fallback channels, so leads are never silently lost. **Set `AUDIT_WEBHOOK_URL` (and ideally the email/WhatsApp variables) before launch.**
+
+### Structure notes
+
+Eight services (Local SEO & Google Maps added), eleven industries (Education, Professional Services and B2B & Exporters added), a `/how-it-works/` page, and Bahrain in the six GCC markets.
 
 ## SEO implementation
 
-Per page: unique `<title>` + description, canonical, `hreflang` (`en`, `th`, `x-default`), Open Graph + Twitter. JSON-LD: `Person`, `ProfessionalService`, `WebSite` (home); `Service` + `BreadcrumbList` + `FAQPage` (service pages — FAQ is visible `<details>` content); `WebPage` + `BreadcrumbList` (industries); `BreadcrumbList` on hubs. No `Organization` schema (no registered entity/address is claimed).
+Per page: unique `<title>` + description, canonical, `hreflang` (`en`, `th`, `ar`, `x-default`), Open Graph + Twitter. JSON-LD: `Person`, `ProfessionalService`, `WebSite` (home); `Service` + `BreadcrumbList` + `FAQPage` (service pages — FAQ is visible `<details>` content); `WebPage` + `BreadcrumbList` (industries); `BreadcrumbList` on hubs. No `Organization` schema (no registered entity/address is claimed).
 Pages now include `/about/` (ProfilePage + Person) and `/industries/restaurants/` (flagged HOT via `HotBadge`; per-vertical "optimises for" line comes from `IndustryPage.model`).
 `/insights/` is `noindex` and excluded from the sitemap until verified research exists.
 

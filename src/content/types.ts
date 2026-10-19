@@ -1,4 +1,4 @@
-import type { IndustrySlug, ServiceSlug } from "@/lib/routes";
+import type { IndustrySlug, MarketSlug, ServiceSlug } from "@/lib/routes";
 import type { Locale } from "@/lib/i18n";
 
 /**
@@ -74,6 +74,7 @@ export interface Dictionary {
     relatedIndustries: { title: string; intro: string };
     relatedServicesForIndustry: { title: string };
     explore: string;
+    whatHappens: string;
     hot: string;
     optimiseFor: string;
     faq: string;
@@ -84,10 +85,10 @@ export interface Dictionary {
     opensNewTab: string;
     sectionProcess: string;
   };
-  markets: Record<"saudi-arabia" | "uae" | "kuwait" | "qatar" | "oman", string>;
+  markets: Record<MarketSlug, string>;
   footer: {
     navTitle: string; marketsTitle: string; externalTitle: string; languagesTitle: string;
-    website: string; linkedin: string; rights: string; disclaimer: string; contact: string; industriesTitle: string;
+    website: string; linkedin: string; email: string; whatsapp: string; rights: string; disclaimer: string; contact: string; industriesTitle: string;
   };
   cta: { primary: string; secondary: string; audit: string };
   home: {
@@ -101,7 +102,7 @@ export interface Dictionary {
       label: string;
       steps: string[]; caption: string; coordsNote: string;
       hub: string; region: string;
-      nodes: Record<"saudi-arabia" | "uae" | "kuwait" | "qatar" | "oman", string>;
+      nodes: Record<MarketSlug, string>;
       destinations: { thailand: string; malaysia: string };
     };
     keepTeam: {
@@ -134,6 +135,7 @@ export interface Dictionary {
     final: { h2: string; body: string };
   };
   about: AboutPage;
+  howPage: HowPage;
   servicesHub: {
     metaTitle: string; metaDescription: string; h1: string; intro: string; collabNote: string; boundary: string;
     pilot: { id: string; h2: string; intro: string; stages: Step[]; note: string };
@@ -194,4 +196,19 @@ export interface AboutPage {
   cta: { h2: string; body: string; label: string };
   servicesTitle: string;
   servicesIntro: string;
+}
+
+export interface HowPage {
+  metaTitle: string;
+  metaDescription: string;
+  h1: string;
+  intro: string;
+  /** Each step: `more` carries inline link markup to the relevant service. */
+  steps: { title: string; body: string; points: string[]; more: string }[];
+  team: { title: string; body: string; yourTeam: string[]; wadhah: string[] };
+  pilotTitle: string;
+  pilotBody: string;
+  pilotCta: string;
+  ctaTitle: string;
+  ctaBody: string;
 }

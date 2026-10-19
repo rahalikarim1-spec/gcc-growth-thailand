@@ -8,7 +8,7 @@ export const home: Dictionary["home"] = {
     eyebrow: "GCC Market Entry & Growth · Southeast Asia",
     h1: "Turn GCC & Arabic Markets Into Your Next Growth Channel",
     lead:
-      "I help businesses in Thailand and Malaysia enter, acquire customers and grow across Saudi Arabia, UAE, Kuwait, Qatar, Oman and the wider Arabic-speaking market.",
+      "I help businesses in Thailand and Malaysia enter, acquire customers and grow across Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, Oman and the wider Arabic-speaking market.",
     description:
       "Through market intelligence, Arabic localization, Google Ads, SEO, conversion-focused landing pages and end-to-end measurement, I build a dedicated GCC growth channel around the team and digital infrastructure you already have.",
     trustLead: "Keep Your Team. Add a New Market.",
@@ -28,13 +28,13 @@ export const home: Dictionary["home"] = {
     ],
   },
   visual: {
-    label: "GCC growth system: demand from five GCC markets routed through a market-entry and growth layer to businesses in Thailand and Malaysia",
+    label: "GCC growth system: demand from six GCC markets routed through a market-entry and growth layer to businesses in Thailand and Malaysia",
     steps: ["Southeast Asian business", "GCC market entry", "Customer acquisition", "Measurable growth"],
-    caption: "Demand signals from five GCC markets, routed through a growth layer to businesses in Thailand and Malaysia.",
+    caption: "Demand signals from six GCC markets, routed through a growth layer to businesses in Thailand and Malaysia.",
     coordsNote: "Schematic · positions indicative",
     hub: "GCC growth layer",
     region: "Southeast Asia",
-    nodes: { "saudi-arabia": "Saudi Arabia", uae: "UAE", kuwait: "Kuwait", qatar: "Qatar", oman: "Oman" },
+    nodes: { "saudi-arabia": "Saudi Arabia", uae: "UAE", kuwait: "Kuwait", qatar: "Qatar", bahrain: "Bahrain", oman: "Oman" },
     destinations: { thailand: "Thailand", malaysia: "Malaysia" },
   },
   keepTeam: {
@@ -144,6 +144,24 @@ export const home: Dictionary["home"] = {
         body: "Improve Arabic local-search visibility and customer acquisition.",
         link: "Hospitality Visibility",
       },
+      {
+        slug: "education",
+        title: "Education & Language Schools",
+        body: "Reach Arabic-speaking students and parents with search-led, localized enquiry journeys for universities, colleges and language schools.",
+        link: "Student Enquiry Growth",
+      },
+      {
+        slug: "professional-services",
+        title: "Professional Services",
+        body: "Help advisory, consulting, accounting, engineering and design firms reach GCC clients with credible, measurable acquisition.",
+        link: "Professional Services Growth",
+      },
+      {
+        slug: "b2b-exporters",
+        title: "B2B & Exporters",
+        body: "Help manufacturers and exporters find GCC importers, distributors and buyers through localized B2B search journeys.",
+        link: "Exporter Lead Generation",
+      },
     ],
   },
   medical: {
@@ -173,7 +191,7 @@ export const home: Dictionary["home"] = {
     h2: "From Market Opportunity to Measurable Growth",
     steps: [
       { title: "Market Intelligence", body: "Validate GCC demand, competitors, search behavior and country-level opportunity before budget is committed." },
-      { title: "Market-Entry Strategy", body: "Prioritize Saudi Arabia, UAE, Kuwait, Qatar and Oman and define the go-to-market approach from Arabic and English search intent." },
+      { title: "Market-Entry Strategy", body: "Prioritize Saudi Arabia, UAE, Kuwait, Qatar, Bahrain and Oman and define the go-to-market approach from Arabic and English search intent." },
       { title: "Arabic Localization", body: "Adapt messaging, trust signals and customer journeys to GCC audiences rather than simply translating existing pages." },
       { title: "Customer Acquisition", body: "Capture high-intent demand through Google Ads and organic search." },
       { title: "Conversion & Measurement", body: "GA4, GTM, forms, WhatsApp/LINE and attribution, plus CRM or offline feedback where appropriate." },
@@ -182,7 +200,7 @@ export const home: Dictionary["home"] = {
     note: "Prefer a structured way to start? See the [90-Day GCC Market Opportunity & Acquisition Pilot](page:services).",
   },
   services: {
-    h2: "Seven connected services, built around your current setup",
+    h2: "Eight connected services, built around your current setup",
     intro: "Use one, or combine them into a complete GCC market-entry and acquisition channel.",
     all: "View all services",
     pilotTitle: "90-Day GCC Market Opportunity & Acquisition Pilot",

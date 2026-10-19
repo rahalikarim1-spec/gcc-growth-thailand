@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-plex), var(--font-plex-thai), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-plex), var(--font-plex-thai), var(--font-plex-arabic), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --color-ink-950: #070c19;
@@ -150,3 +150,11 @@ html[dir="rtl"] .field-ltr { direction: ltr; text-align: right; }
   .pulse-ring { opacity: 0; }
   * { transition-duration: 0.01ms !important; }
 }
+
+/* Arabic typography: connected script needs generous leading and no letter-spacing. */
+html[lang="ar"] body { line-height: 1.85; }
+html[lang="ar"] :is(h1, h2, h3, h4) { line-height: 1.35; letter-spacing: 0; }
+html[lang="ar"] [class*="tracking-"] { letter-spacing: 0; }
+html[lang="ar"] .font-mono { font-family: var(--font-sans); }
+html[lang="ar"] .eyebrow { letter-spacing: 0; text-transform: none; font-family: var(--font-sans); font-size: 0.875rem; }
+html[lang="ar"] .h-display { font-size: clamp(2rem, 4.6vw, 3.5rem); line-height: 1.3; }

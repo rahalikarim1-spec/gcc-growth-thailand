@@ -32,7 +32,7 @@ export const industries: Dictionary["industries"] = {
       title: "The GCC opportunity",
       body: [
         "Arabic-speaking prospects search for hair-restoration treatments abroad and expect information, reassurance and fast contact in their own language. A dedicated acquisition path lets a clinic be present at the moments of research and comparison.",
-        "The opportunity is visibility and qualified enquiry, not guaranteed volume: country by country, Saudi Arabia, UAE, Kuwait, Qatar and Oman each behave differently and deserve separate measurement.",
+        "The opportunity is visibility and qualified enquiry, not guaranteed volume: country by country, Saudi Arabia, UAE, Kuwait, Qatar, Bahrain and Oman each behave differently and deserve separate measurement.",
       ],
     },
     funnel: {
@@ -99,6 +99,7 @@ export const industries: Dictionary["industries"] = {
     servicesIntro: "The dental acquisition path draws on these services:",
     serviceNotes: {
       "arabic-seo": "Treatment pages that capture long-term Arabic demand for implants, veneers and cosmetic dentistry.",
+      "local-seo": "A complete Google Business Profile and Maps presence so patients can verify and reach the clinic.",
       "google-ads-gcc": "Immediate visibility on high-intent treatment queries while organic rankings build.",
       "arabic-localization": "Treatment messaging and journeys adapted for GCC patients planning dental care abroad.",
       "arabic-landing-pages": "Treatment-specific pages that fit how traveling patients evaluate a clinic.",
@@ -228,7 +229,8 @@ export const industries: Dictionary["industries"] = {
     },
     servicesIntro: "A restaurant acquisition setup typically combines:",
     serviceNotes: {
-      "arabic-seo": "Arabic and English search visibility, including Google Business Profile and Maps signals.",
+      "local-seo": "Google Business Profile, Maps visibility and genuine reviews: the foundation of local discovery.",
+      "arabic-seo": "Arabic and English search visibility around cuisine, halal and premium-dining queries.",
       "google-ads-gcc": "Search campaigns timed to tourist demand around your location.",
       "arabic-landing-pages": "Menu, map, hours and booking in a fast, mobile-first page for international guests.",
       "conversion-tracking": "Directions, calls, reservations and chat taps measured where technically possible.",
@@ -279,6 +281,7 @@ export const industries: Dictionary["industries"] = {
     serviceNotes: {
       "gcc-market-entry": "Understand which GCC source markets suit your property and season.",
       "market-intelligence": "See which GCC source markets, seasons and room types show real demand before you invest.",
+      "local-seo": "Accurate Maps profiles, photos and reviews so travelers can verify and reach the property.",
       "arabic-seo": "Arabic content and local search presence for hotels and premium venues.",
       "google-ads-gcc": "Reach GCC travelers while they compare destinations and stays.",
     },
@@ -427,5 +430,160 @@ export const industries: Dictionary["industries"] = {
     },
     ctaTitle: "Build a qualified GCC property enquiry channel",
     ctaBody: "A market audit reviews your inventory and sales process to see where GCC demand could fit.",
+  },
+
+  education: {
+    navLabel: "Education",
+    cardTitle: "Education & Language Schools",
+    cardSummary: "Reach Arabic-speaking students and parents with search-led, localized enquiry journeys for universities, colleges and language schools.",
+    cardLink: "Student Enquiry Growth",
+    model: "Qualified student and parent enquiries and applications",
+    metaTitle: "Student Acquisition from GCC Markets for Education Providers | Wadhah Belhassen",
+    metaDescription:
+      "Google Ads, Arabic SEO and localized landing pages that help universities, colleges and language schools in Thailand and Malaysia reach Arabic-speaking students and parents.",
+    h1: "GCC Student Acquisition for Education Providers in Thailand and Malaysia",
+    intro:
+      "A GCC enquiry funnel for universities, colleges and language schools that want Arabic-speaking students and parents to find, trust and contact them, built alongside your admissions and marketing teams.",
+    problem: {
+      title: "The market problem",
+      body: [
+        "Choosing a school or university abroad is a long, family decision. Students and parents compare programs, fees, locations and student life over months, often searching in Arabic and asking questions on messaging apps before they apply.",
+        "Most providers publish English-only program pages. Practical questions about accommodation, daily life, fees and how to start are answered poorly or not at all for Arabic-speaking families.",
+      ],
+    },
+    opportunity: {
+      title: "The GCC opportunity",
+      body: [
+        "Program-level pages and campaigns in Arabic and English let a provider be present while families are researching, rather than after they have shortlisted competitors.",
+        "Opportunity differs by country, program type and season, so it is validated before budget is committed, and measured by enquiry quality and applications, not clicks.",
+      ],
+    },
+    funnel: {
+      title: "Recommended acquisition funnel",
+      intro: "Built around a long, family-led decision.",
+      steps: [
+        { title: "Program-level search", body: "Arabic and English campaigns and [Arabic SEO](service:arabic-seo) around program and destination queries." },
+        { title: "Localized program pages", body: "Clear information on content, fees, location and student life, adapted for students and for parents." },
+        { title: "Easy contact", body: "A short form plus WhatsApp or LINE, with a clear reply-time promise." },
+        { title: "Admissions follow-up", body: "Your admissions team qualifies and guides each enquiry." },
+        { title: "Measure enquiry to application", body: "Feed application status back so campaigns optimize toward real applicants." },
+      ],
+    },
+    servicesIntro: "A student acquisition channel combines:",
+    serviceNotes: {
+      "gcc-market-entry": "Decide which GCC countries and program types are worth pursuing first.",
+      "market-intelligence": "Check search demand, competing providers and likely cost per qualified enquiry before budget is committed.",
+      "arabic-localization": "Adapt program messaging and the journey for students and parents, not translate it.",
+      "google-ads-gcc": "Capture active program and destination research in Arabic and English.",
+      "arabic-landing-pages": "Program pages that answer fees, accommodation and daily-life questions.",
+    },
+    responsibility: {
+      title: "Clear roles: acquisition vs. admissions",
+      intro: "Marketing and institutional responsibilities stay clearly separated.",
+      wadhah: ["Acquisition strategy and optimization", "Search campaigns, landing journeys and tracking", "Reporting on enquiries and applications"],
+      client: ["Admissions decisions", "Accreditation and program claims", "Student support and welfare", "Visa and immigration guidance"],
+      note: "No admissions outcomes or enrolment numbers are promised. Program, accreditation and regulatory claims come from, and are approved by, the institution.",
+    },
+    ctaTitle: "Explore GCC student demand for your programs",
+    ctaBody: "Request a market audit to see how Arabic-speaking students and parents currently find providers like yours.",
+  },
+
+  "professional-services": {
+    navLabel: "Professional Services",
+    cardTitle: "Professional Services",
+    cardSummary: "Help advisory, consulting, accounting, engineering and design firms reach GCC clients with credible, measurable acquisition.",
+    cardLink: "Professional Services Growth",
+    model: "Qualified consultation requests from decision-makers",
+    metaTitle: "GCC Client Acquisition for Professional Services Firms | Wadhah Belhassen",
+    metaDescription:
+      "Arabic SEO, Google Ads and credibility-led landing pages that help professional services firms in Thailand and Malaysia reach GCC business clients.",
+    h1: "GCC Client Acquisition for Professional Services Firms in Thailand and Malaysia",
+    intro:
+      "A credibility-led acquisition path for advisory, consulting, accounting, engineering and design firms that want qualified consultation requests from GCC decision-makers, alongside your current business development.",
+    problem: {
+      title: "The market problem",
+      body: [
+        "Professional services are bought on trust. A GCC buyer checking a firm in another country looks for proof of capability, clarity on who you work with and an easy way to start a conversation, ideally in Arabic or at least without friction.",
+        "Most firms present themselves in English only, with generic capability pages and no sense of how they work with international clients, so qualified buyers never reach out.",
+      ],
+    },
+    opportunity: {
+      title: "The GCC opportunity",
+      body: [
+        "Specific service pages, clear credentials and a considered Arabic and English presence let a firm appear when decision-makers search for the capability you offer.",
+        "Volume is small and value per client is high, so the right measure is qualified consultation requests, reviewed with your business development team.",
+      ],
+    },
+    funnel: {
+      title: "Recommended acquisition funnel",
+      intro: "Built around credibility and a clear first conversation.",
+      steps: [
+        { title: "Positioning and demand check", body: "Which services GCC buyers actually search for, and who already answers." },
+        { title: "Credibility content", body: "Service pages and case descriptions you have permission to publish, adapted for GCC readers." },
+        { title: "Targeted search", body: "[Arabic SEO](service:arabic-seo) plus focused search campaigns on high-intent queries." },
+        { title: "Consultation request", body: "A short enquiry flow that qualifies without scaring serious buyers away." },
+        { title: "Business development feedback", body: "Lead status flows back so you can see which sources produce real conversations." },
+      ],
+    },
+    servicesIntro: "A professional services acquisition path draws on:",
+    serviceNotes: {
+      "gcc-market-entry": "Decide which services and GCC countries justify the effort first.",
+      "arabic-seo": "Be found by decision-makers searching for your capability in Arabic and English.",
+      "local-seo": "Where you have a physical office or service area, keep your Google profile accurate and trustworthy.",
+      "arabic-landing-pages": "Credibility-led pages that make it easy to start a conversation.",
+      "conversion-tracking": "Measure consultation requests and their quality, not just form fills.",
+    },
+    ctaTitle: "Explore GCC demand for your services",
+    ctaBody: "Request a market audit to see where decision-makers in GCC markets search for services like yours.",
+  },
+
+  "b2b-exporters": {
+    navLabel: "B2B & Exporters",
+    cardTitle: "B2B & Exporters",
+    cardSummary: "Help manufacturers and exporters find GCC importers, distributors and buyers through localized B2B search journeys.",
+    cardLink: "Exporter Lead Generation",
+    model: "Qualified importer, distributor and buyer enquiries",
+    metaTitle: "GCC Buyer Acquisition for Exporters and B2B Companies | Wadhah Belhassen",
+    metaDescription:
+      "Google Ads, Arabic SEO and localized B2B landing pages that help manufacturers and exporters in Thailand and Malaysia reach importers, distributors and buyers in GCC markets.",
+    h1: "GCC Buyer Acquisition for Exporters and B2B Companies in Thailand and Malaysia",
+    intro:
+      "A search-led path for manufacturers, food and product exporters and B2B suppliers that want qualified importer, distributor and buyer enquiries from GCC markets, alongside your current export sales process.",
+    problem: {
+      title: "The market problem",
+      body: [
+        "GCC importers and distributors search for suppliers in Arabic and English, compare specifications and look for clear answers on minimum orders, packaging, certifications and lead times. Catalogs buried in PDFs and English-only product pages make a supplier hard to shortlist.",
+        "Export teams often rely on trade fairs and personal introductions. That works, but it leaves the always-on demand of buyers who search first and speak to suppliers later untouched.",
+      ],
+    },
+    opportunity: {
+      title: "The GCC opportunity",
+      body: [
+        "Product and category pages in Arabic and English, with specifications and request-for-quote paths built for buyers, let a supplier be found at the research stage.",
+        "B2B volumes are modest and deal values are high, so success is measured in qualified buyer conversations and quotes requested, with your sales team feeding back what turns into orders. Import regulations and compliance remain a matter for specialist partners.",
+      ],
+    },
+    funnel: {
+      title: "Recommended acquisition funnel",
+      intro: "Built around buyers who research before they call.",
+      steps: [
+        { title: "Buyer-intent search", body: "Arabic and English campaigns and [Arabic SEO](service:arabic-seo) on supplier, distributor and product queries." },
+        { title: "Localized product pages", body: "Specifications, certifications you hold, minimum orders, packaging and lead times, stated accurately." },
+        { title: "Request for quote", body: "A short RFQ form plus WhatsApp for fast first contact." },
+        { title: "Sales follow-up", body: "Your export team qualifies and responds." },
+        { title: "Measure quote to order", body: "Lead and order status feed back so campaigns optimize toward real buyers." },
+      ],
+    },
+    servicesIntro: "A B2B acquisition channel combines:",
+    serviceNotes: {
+      "gcc-market-entry": "Choose the GCC countries and product categories with real buyer demand.",
+      "market-intelligence": "Validate search demand, competing suppliers and likely cost per qualified buyer before spending.",
+      "arabic-localization": "Adapt product messaging and trust signals for GCC buyers.",
+      "google-ads-gcc": "Capture supplier and product searches in Arabic and English.",
+      "arabic-landing-pages": "Product and RFQ pages built for how importers compare suppliers.",
+      "conversion-tracking": "Track quote requests and what they become, not just clicks.",
+    },
+    ctaTitle: "Find out whether GCC buyers are searching for what you export",
+    ctaBody: "Request a market audit to see buyer demand and competing suppliers for your product category.",
   },
 };
