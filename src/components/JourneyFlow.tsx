@@ -16,7 +16,7 @@ export function JourneyFlow({ label, steps, tone = "dark" }: { label: string; st
             {i < steps.length - 1 && (
               <>
                 <ArrowDown aria-hidden className="mx-auto size-4 opacity-50 lg:hidden" />
-                <ArrowRight aria-hidden className="hidden size-4 shrink-0 opacity-50 lg:block rtl:rotate-180" />
+                <ArrowRight aria-hidden className="hidden size-4 shrink-0 opacity-50 lg:block" />
               </>
             )}
           </li>

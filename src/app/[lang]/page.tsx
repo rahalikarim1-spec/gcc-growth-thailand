@@ -151,7 +151,7 @@ export default async function HomePage({ params }: Props) {
                   <span className="mt-2 block text-slate-300">{h.services.pilotBody}</span>
                 </span>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-signal-bright">
-                  {h.services.pilotCta}<ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1 rtl:rotate-180" />
+                  {h.services.pilotCta}<ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
                 </span>
               </Link>
             </li>

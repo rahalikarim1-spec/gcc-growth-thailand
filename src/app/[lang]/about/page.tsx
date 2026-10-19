@@ -64,7 +64,7 @@ export default async function AboutPage({ params }: Props) {
         <span className="block text-lg font-semibold">{label}<span className="sr-only"> {dict.ui.opensNewTab}</span></span>
         <span className="mt-1 block text-muted">{desc}</span>
       </span>
-      <ExternalLink aria-hidden className="mt-1 size-5 shrink-0 text-signal transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+      <ExternalLink aria-hidden className="mt-1 size-5 shrink-0 text-signal transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5" />
     </a>
   );
 
@@ -75,7 +75,7 @@ export default async function AboutPage({ params }: Props) {
       {/* Hero */}
       <section className="on-dark relative isolate overflow-hidden bg-ink-950 text-white">
         <div aria-hidden className="grid-bg absolute inset-0 -z-10 [mask-image:radial-gradient(80%_100%_at_20%_0%,#000,transparent)]" />
-        <div aria-hidden className="absolute -right-32 -top-20 -z-10 size-96 rounded-full bg-signal/20 blur-3xl" />
+        <div aria-hidden className="absolute -end-32 -top-20 -z-10 size-96 rounded-full bg-signal/20 blur-3xl" />
         <div className="container-x pb-14 pt-12 lg:pb-20 lg:pt-16">
           <Breadcrumbs items={crumbs} label={dict.ui.breadcrumbs} dark />
           <div className="mt-10 grid items-center gap-12 lg:grid-cols-[1.3fr_0.7fr]">
@@ -209,7 +209,7 @@ export default async function AboutPage({ params }: Props) {
                       <Link href={localePath(lang, `/industries/${it.slug}`)} className={`card group flex h-full flex-col p-5 ${g.hot ? "ring-1 ring-gold/30" : ""}`}>
                         <span className="flex items-center justify-between gap-3 text-lg font-semibold">
                           <span className="flex flex-wrap items-center gap-2.5">{it.name}{g.hot && <HotBadge label={dict.ui.hot} />}</span>
-                          <ArrowRight aria-hidden className="size-4 shrink-0 text-signal transition-transform group-hover:translate-x-1 rtl:rotate-180" />
+                          <ArrowRight aria-hidden className="size-4 shrink-0 text-signal transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
                         </span>
                         <span className="mt-2 text-sm text-muted"><span className="font-medium text-ink-900">{dict.ui.optimiseFor}:</span> {dict.industries[it.slug].model}</span>
                       </Link>

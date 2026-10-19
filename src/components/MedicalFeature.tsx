@@ -24,7 +24,7 @@ export function MedicalFeature({ locale, dict }: { locale: Locale; dict: Diction
             return (
               <li
                 key={step}
-                className={`relative rounded-xl border p-4 text-[0.95rem] font-medium leading-snug ${i < m.funnel.length - 1 ? "lg:after:absolute lg:after:-right-[0.95rem] lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:text-slate-400 lg:after:content-['→'] rtl:lg:after:content-['←']" : ""} ${
+                className={`relative rounded-xl border p-4 text-[0.95rem] font-medium leading-snug ${i < m.funnel.length - 1 ? "lg:after:absolute lg:after:-end-[0.95rem] lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:text-slate-400 lg:after:content-['→'] rtl:lg:after:content-['←']" : ""} ${
                   mine ? "border-signal-bright/50 bg-signal-bright/10" : "border-gold-bright/40 bg-gold-bright/[0.07]"
                 }`}
               >

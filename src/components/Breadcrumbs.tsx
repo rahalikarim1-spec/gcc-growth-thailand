@@ -16,7 +16,7 @@ export function Breadcrumbs({ items, label, dark }: { items: Crumb[]; label: str
               ) : (
                 <>
                   <Link href={item.href} className="underline-offset-4 hover:underline">{item.name}</Link>
-                  <ChevronRight aria-hidden className="size-3.5 opacity-60 rtl:rotate-180" />
+                  <ChevronRight aria-hidden className="size-3.5 opacity-60" />
                 </>
               )}
             </li>

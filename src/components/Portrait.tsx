@@ -10,7 +10,7 @@ interface Props { alt: string; name: string; role: string; role2: string; priori
 export function Portrait({ alt, name, role, role2, priority }: Props) {
   return (
     <figure className="relative mx-auto w-full max-w-md lg:max-w-none">
-      <div aria-hidden className="absolute -bottom-3 -right-3 top-6 left-6 rounded-3xl border border-signal-bright/35" />
+      <div aria-hidden className="absolute -bottom-3 -end-3 start-6 top-6 rounded-3xl border border-signal-bright/35" />
       <div className="relative overflow-hidden rounded-3xl border border-white/12 bg-ink-900 shadow-2xl">
         <Image
           src={SRC}

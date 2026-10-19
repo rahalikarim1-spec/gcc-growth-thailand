@@ -29,8 +29,8 @@ const SEA = [
 
 export function MarketFlow({ v }: { v: Dictionary["home"]["visual"] }) {
   return (
-    <figure className="ml-auto w-full max-w-[26rem] rounded-2xl border border-white/10 bg-ink-950/55 p-3 backdrop-blur-[3px] sm:p-4 lg:max-w-[18rem]" aria-label={v.label}>
-      <svg viewBox="0 0 380 500" role="img" aria-label={v.label} className="mx-auto h-auto w-full" fill="none">
+    <figure className="ms-auto w-full max-w-[26rem] rounded-2xl border border-white/10 bg-ink-950/55 p-3 backdrop-blur-[3px] sm:p-4 lg:max-w-[18rem]" aria-label={v.label}>
+      <svg viewBox="0 0 380 500" role="img" aria-label={v.label} className="mx-auto h-auto w-full" fill="none" style={{ direction: "ltr" }}>
         <defs>
           <linearGradient id="mf-line" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0" stopColor="#e4bb6a" />

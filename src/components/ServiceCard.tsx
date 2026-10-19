@@ -9,7 +9,7 @@ export function ServiceCard({ href, title, summary, index, cta }: { href: string
       <p className="mt-2 grow text-muted">{summary}</p>
       <span className="link-arrow mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-signal-dark">
         {cta}
-        <ArrowUpRight aria-hidden className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+        <ArrowUpRight aria-hidden className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5" />
       </span>
     </Link>
   );

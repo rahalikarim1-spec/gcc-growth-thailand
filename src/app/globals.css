@@ -133,6 +133,12 @@
   .on-dark .rich a { color: var(--color-signal-bright); }
 }
 
+/* RTL: mirror directional icons; hover nudges follow reading direction. */
+html[dir="rtl"] :is(.lucide-arrow-right, .lucide-chevron-right, .lucide-arrow-up-right) { scale: -1 1; }
+html[dir="rtl"] .btn:hover .arrow, html[dir="rtl"] .link-arrow:hover .arrow { transform: translateX(-3px); }
+/* Latin-only inputs (email, URL, phone) stay LTR but align to the reading edge. */
+html[dir="rtl"] .field-ltr { direction: ltr; text-align: right; }
+
 /* Market-flow animation: communicates demand signals moving toward the business. */
 @keyframes flow { to { stroke-dashoffset: -24; } }
 @keyframes pulse { 0% { transform: scale(1); opacity: .55; } 100% { transform: scale(2.8); opacity: 0; } }

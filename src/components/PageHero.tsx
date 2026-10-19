@@ -17,7 +17,7 @@ export function PageHero({ crumbs, crumbsLabel, h1, lead, note, cta, badge }: Pr
   return (
     <section className="on-dark relative isolate overflow-hidden bg-ink-950 text-white">
       <div aria-hidden className="grid-bg absolute inset-0 -z-10 [mask-image:radial-gradient(80%_100%_at_20%_0%,#000,transparent)]" />
-      <div aria-hidden className="absolute -right-32 -top-20 -z-10 size-96 rounded-full bg-signal/20 blur-3xl" />
+      <div aria-hidden className="absolute -end-32 -top-20 -z-10 size-96 rounded-full bg-signal/20 blur-3xl" />
       <div className="container-x py-12 lg:py-20">
         <Breadcrumbs items={crumbs} label={crumbsLabel} dark />
         {badge && <p className="mt-8"><HotBadge label={badge} tone="dark" /></p>}

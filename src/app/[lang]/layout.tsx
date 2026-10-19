@@ -35,7 +35,7 @@ export default async function LangLayout({ children, params }: { children: React
   return (
     <html lang={localeMeta[lang].htmlLang} className={`${plex.variable} ${plexThai.variable}`}>
       <body>
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-ink-900">
+        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-ink-900">
           {dict.nav.skip}
         </a>
         <Header locale={lang} dict={dict} />

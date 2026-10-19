@@ -19,7 +19,7 @@ export function IndustryCard({ href, title, body, link, dark, hot }: { href: str
       <p className={`mt-2 grow text-[0.95rem] ${dark ? "text-slate-300" : "text-muted"}`}>{body}</p>
       <span className={`mt-5 inline-flex items-center gap-1.5 text-sm font-semibold ${dark ? "text-signal-bright" : "text-signal-dark"}`}>
         {link}
-        <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1 rtl:rotate-180" />
+        <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
       </span>
     </Link>
   );

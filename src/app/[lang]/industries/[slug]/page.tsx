@@ -128,7 +128,7 @@ export default async function IndustryPage({ params }: Props) {
                   <h3 className="text-lg font-semibold">{dict.services[s].cardTitle}</h3>
                   <p className="mt-2 grow text-muted">{p.serviceNotes[s] ?? dict.services[s].cardSummary}</p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-signal-dark">
-                    {dict.ui.explore}<ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1" />
+                    {dict.ui.explore}<ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
                   </span>
                 </Link>
               </li>
