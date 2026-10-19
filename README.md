@@ -6,7 +6,7 @@ Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · EN + TH · deployable
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000  → redirects to /en/
+npm run dev          # http://localhost:3000  → English at /, Thai at /th/, Arabic at /ar/
 npm run lint && npm run typecheck && npm run build
 ```
 
@@ -14,7 +14,7 @@ Environment (see `.env.example`):
 
 | Variable | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Canonical origin for canonicals, hreflang, sitemap, JSON-LD. Falls back to `VERCEL_PROJECT_PRODUCTION_URL`, then `http://localhost:3000`. |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin for canonicals, hreflang, sitemap, JSON-LD. Defaults to `https://arabicmarket.asia` (or `VERCEL_PROJECT_PRODUCTION_URL` on Vercel). |
 | `AUDIT_WEBHOOK_URL` | Where audit-form leads are POSTed (Zapier/Make/n8n/CRM). **Unset in production ⇒ the form shows an error** rather than silently dropping leads. |
 
 ## Architecture
@@ -54,6 +54,10 @@ No contact details are invented. `lib/site.ts` (`contactChannels`, `getContactLi
 ### Structure notes
 
 Eight services (Local SEO & Google Maps added), eleven industries (Education, Professional Services and B2B & Exporters added), a `/how-it-works/` page, and Bahrain in the six GCC markets.
+
+### URL architecture
+
+English is the default locale and has **no prefix** (`/`, `/services/`, `/industries/restaurants/`); Thai is `/th/...` and Arabic `/ar/...`. Internally every page still lives under `src/app/[lang]/`; `next.config.ts` rewrites unprefixed URLs to `/en/...` and 308-redirects legacy `/en/...` URLs to their unprefixed equivalent. Always build links with `localePath(locale, path)` (never hard-code `/en`). Trailing slashes stay on (`trailingSlash: true`). There is no geo/IP/browser-language redirect: the root is always English.
 
 ## SEO implementation
 

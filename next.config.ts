@@ -5,11 +5,26 @@ const nextConfig: NextConfig = {
   images: { formats: ["image/avif", "image/webp"], qualities: [60, 75] },
   poweredByHeader: false,
   reactStrictMode: true,
+  // English is the default locale and has no URL prefix: /services is served from the internal /en/services route.
+  // Thai (/th) and Arabic (/ar) keep their prefix. There is deliberately no geo/IP/Accept-Language redirect.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: "/", destination: "/en/" },
+        { source: "/:path((?!(?:th|ar|en|api|_next|images)(?:/|$)|icon\\.svg$|sitemap\\.xml$|robots\\.txt$).+)", destination: "/en/:path" },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
   async redirects() {
     return [
-      { source: "/", destination: "/en/", permanent: false },
       // Retired service page: its customer-journey scope now lives in Arabic Localization & Customer Experience.
-      { source: "/:lang(en|th)/services/customer-journey-optimization", destination: "/:lang/services/arabic-localization/", permanent: true },
+      { source: "/en/services/customer-journey-optimization", destination: "/services/arabic-localization/", permanent: true },
+      { source: "/th/services/customer-journey-optimization", destination: "/th/services/arabic-localization/", permanent: true },
+      // Legacy English-prefixed URLs -> canonical unprefixed URLs (full path preserved, single hop).
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/en/:path*", destination: "/:path*/", permanent: true },
     ];
   },
   async headers() {
